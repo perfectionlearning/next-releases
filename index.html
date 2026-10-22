@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Releases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0f6e3f; --green-2:#1d8f57; --green-soft:#e9f4ee; --green-line:#cfe6d9;
+    --ink:#1f2328; --muted:#5d6670; --line:#e3e6e8; --bg:#f6f7f8; --card:#fff;
+    --amber:#fff6db; --amber-line:#f0cf6b; --amber-ink:#7a5a00;
+    --blue-soft:#eaf2fb; --blue-ink:#1f5f9f;
+    --radius:10px; --shadow:0 1px 2px rgba(16,24,32,.06),0 1px 1px rgba(16,24,32,.04);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+  a{color:var(--blue-ink)}
+  /* top bar */
+  .top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+  .top .in{max-width:1180px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+  .brand{display:flex;align-items:baseline;gap:8px;white-space:nowrap}
+  .brand b{font-size:18px;color:var(--green);letter-spacing:-.01em}
+  .brand span{font-size:14px;color:var(--muted)}
+  .internal{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#8a2b12;background:#fdecea;border:1px solid #f5c2b8;border-radius:20px;padding:3px 10px;white-space:nowrap}
+  .search{flex:1;max-width:460px;margin-left:auto;position:relative}
+  .search input{width:100%;font:inherit;font-size:14px;padding:9px 12px 9px 34px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+  .search input:focus{outline:2px solid var(--green-line);border-color:var(--green);background:#fff}
+  .search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  /* layout */
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 60px;display:grid;grid-template-columns:230px 1fr;gap:28px}
+  aside{position:sticky;top:76px;align-self:start}
+  .side-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 10px}
+  .rel-list{list-style:none;margin:0 0 22px;padding:0}
+  .rel-list a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:500}
+  .rel-list a:hover{background:#eceff1}
+  .rel-list a.on{background:var(--green-soft);color:var(--green);font-weight:600}
+  .toc{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+  .toc a{display:block;padding:5px 12px;color:var(--muted);text-decoration:none;font-size:14px;margin-left:-2px;border-left:2px solid transparent}
+  .toc a:hover{color:var(--ink)}
+  .toc a.on{color:var(--green);border-left-color:var(--green);font-weight:500}
+  .pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .pill.upcoming{background:var(--amber);color:var(--amber-ink)}
+  .pill.released{background:var(--green-soft);color:var(--green)}
+  /* hero */
+  .hero{background:linear-gradient(120deg,var(--green),var(--green-2));color:#fff;border-radius:var(--radius);padding:26px 28px;margin-bottom:22px}
+  .hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+  .hero h1{margin:0;font-size:30px;line-height:1.2;letter-spacing:-.02em}
+  .hero .pill{background:#fff}
+  .hero .pill.upcoming{color:var(--amber-ink)} .hero .pill.released{color:var(--green)}
+  .hero p{margin:6px 0 0;opacity:.95}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:13px;opacity:.92}
+  .meta b{font-weight:600}
+  /* sections */
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:20px}
+  section h2{margin:0 0 4px;font-size:19px;letter-spacing:-.01em}
+  .sub{margin:0 0 16px;color:var(--muted);font-size:14px}
+  .changes{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+  .chg{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:#fcfdfd;display:flex;flex-direction:column}
+  .chg .area{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+  .chg h3{margin:4px 0 6px;font-size:15.5px}
+  .chg p{margin:0 0 10px;font-size:14px;color:#33393f;flex:1}
+  .tix{display:flex;flex-wrap:wrap;gap:4px}
+  .tix span{font-size:11px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+  .arts{list-style:none;margin:0;padding:0}
+  .arts li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+  .arts li:last-child{border-bottom:0}
+  .arts .t{font-weight:600;font-size:14.5px}
+  .arts .n{font-size:13.5px;color:var(--muted)}
+  .soon{font-size:12px;color:var(--muted);font-style:italic;white-space:nowrap}
+  .open-link{font-size:13px;font-weight:600;white-space:nowrap;text-decoration:none}
+  .faq-tools{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:12px}
+  .faq-tools button{font:inherit;font-size:13px;color:var(--blue-ink);background:none;border:0;cursor:pointer;padding:0}
+  details{border:1px solid var(--line);border-radius:8px;margin-bottom:10px;background:#fff}
+  details[open]{border-color:var(--green-line)}
+  summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  summary::-webkit-details-marker{display:none}
+  summary .count{font-weight:500;font-size:12px;color:var(--muted)}
+  summary .chev{transition:transform .15s;color:var(--green)}
+  details[open] summary .chev{transform:rotate(90deg)}
+  details[open] summary{border-bottom:1px solid var(--line);background:var(--green-soft);border-radius:8px 8px 0 0}
+  .qa{padding:4px 16px 8px}
+  .qa .item{padding:12px 0;border-bottom:1px dashed var(--line)}
+  .qa .item:last-child{border-bottom:0}
+  .q{font-weight:600;font-size:14.5px}
+  .a{margin-top:3px;font-size:14.5px;color:#33393f}
+  .issue{background:var(--amber);border:1px solid var(--amber-line);border-radius:8px;padding:13px 16px;margin-bottom:10px;font-size:14.5px}
+  .issue b{color:var(--amber-ink)}
+  .empty{color:var(--muted);font-size:14px}
+  /* search results */
+  .res-h{font-size:13px;color:var(--muted);margin:0 0 14px}
+  .hit{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:10px;background:#fff}
+  .hit .where{font-size:12px;color:var(--muted);margin-bottom:3px}
+  mark{background:#ffe58f;padding:0 1px;border-radius:2px}
+  footer{color:var(--muted);font-size:12px;margin-top:6px}
+  /* mobile */
+  .m-rel{display:none}
+  @media (max-width:860px){
+    .wrap{grid-template-columns:1fr;padding:16px 16px 48px;gap:0}
+    aside{display:none}
+    .m-rel{display:flex;gap:6px;overflow-x:auto;margin-bottom:14px;padding-bottom:2px}
+    .m-rel a{flex:none;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 12px;font-size:13px;font-weight:500}
+    .m-rel a.on{background:var(--green);border-color:var(--green);color:#fff}
+    .top .in{flex-wrap:wrap;padding:10px 16px}
+    .search{max-width:none;flex-basis:100%;margin:0}
+    .hero{padding:20px}
+    .hero h1{font-size:24px}
+    section.card{padding:18px 16px}
+    .arts li{flex-direction:column;align-items:flex-start;gap:4px}
+  }
+  @media print{.top,aside,.m-rel,.faq-tools button{display:none}.wrap{display:block}details{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="in">
+  <div class="brand"><b>Perfection Next</b><span>Release updates</span></div>
+  <span class="internal" title="This page is for Perfection Learning staff. Please don't share the link with customers.">Internal use only - not for customers</span>
+  <label class="search" aria-label="Search all releases">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search all releases - e.g. password, Text to Speech, class code" autocomplete="off">
+  </label>
+</div></header>
+
+<div class="wrap">
+  <aside>
+    <p class="side-h">Releases</p>
+    <ul class="rel-list" id="relList"></ul>
+    <p class="side-h">On this page</p>
+    <ul class="toc" id="toc">
+      <li><a href="#changes">What's changing</a></li>
+      <li><a href="#articles">Support Center articles</a></li>
+      <li><a href="#faq">Quick reference</a></li>
+      <li><a href="#issues">Known issues</a></li>
+    </ul>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<script src="releases.js"></script>
+<script>
+(function(){
+  const R = window.RELEASES || [];
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const statusLabel = s => s === 'released' ? 'Released' : 'Upcoming';
+  const chev = '<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>';
+
+  function currentId(){
+    const h = location.hash.replace('#','');
+    const id = h.split('/')[0];
+    return R.find(r => r.id === id) ? id : (R[0] && R[0].id);
+  }
+
+  function renderNav(id){
+    $('#relList').innerHTML = R.map(r =>
+      `<li><a href="#${r.id}" class="${r.id===id?'on':''}">${esc(r.label)} <span class="pill ${r.status}">${statusLabel(r.status)}</span></a></li>`).join('');
+  }
+
+  function renderRelease(id){
+    const r = R.find(x => x.id === id);
+    if(!r){ $('#main').innerHTML = '<p class="empty">No releases yet.</p>'; return; }
+    const mobile = `<nav class="m-rel">${R.map(x=>`<a href="#${x.id}" class="${x.id===id?'on':''}">${esc(x.label)}</a>`).join('')}</nav>`;
+    const changes = r.changes.map(c => `
+      <div class="chg"><div class="area">${esc(c.area)}</div><h3>${esc(c.title)}</h3><p>${esc(c.detail)}</p>
+      <div class="tix">${(c.tickets||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div></div>`).join('');
+    const arts = r.articles.map(a => `
+      <li><div><div class="t">${esc(a.title)}</div><div class="n">${esc(a.note)}</div></div>
+      ${a.url ? `<a class="open-link" href="${esc(a.url)}" target="_blank" rel="noopener">Open article &rarr;</a>` : `<span class="soon">Link when live</span>`}</li>`).join('');
+    const faq = r.faq.map((g,i) => `
+      <details ${i===0?'open':''}><summary><span>${esc(g.group)}</span><span><span class="count">${g.items.length} question${g.items.length>1?'s':''}</span> ${chev}</span></summary>
+      <div class="qa">${g.items.map(it=>`<div class="item"><div class="q">${esc(it.q)}</div><div class="a">${esc(it.a)}</div></div>`).join('')}</div></details>`).join('');
+    const issues = (r.knownIssues||[]).length
+      ? r.knownIssues.map(k=>`<div class="issue"><b>${esc(k.title)}</b> ${esc(k.detail)}</div>`).join('')
+      : '<p class="empty">None reported.</p>';
+
+    $('#main').innerHTML = `${mobile}
+      <div class="hero">
+        <div class="row"><h1>${esc(r.label)}</h1><span class="pill ${r.status}">${statusLabel(r.status)}</span></div>
+        <p>${esc(r.dates)}${r.note ? ' - ' + esc(r.note) : ''}</p>
+        <div class="meta"><span><b>Updated</b> ${esc(r.updated)}</span><span><b>Questions</b> ${esc(r.contact)}</span></div>
+      </div>
+      <section class="card" id="changes"><h2>What's changing</h2><p class="sub">What teachers, students and admins will see.</p><div class="changes">${changes}</div></section>
+      <section class="card" id="articles"><h2>Support Center articles</h2><p class="sub">${r.status==='released'?'Live in the Support Center.':'These go live once the release is on prod.'}</p><ul class="arts">${arts}</ul></section>
+      <section class="card" id="faq"><div class="faq-tools"><div><h2>Quick reference</h2><p class="sub" style="margin:0">Questions customers are likely to ask, with short answers.</p></div><button type="button" id="toggleAll">Expand all</button></div>${faq}</section>
+      <section class="card" id="issues"><h2>Known issues</h2><p class="sub">Workarounds until a fix ships.</p>${issues}</section>
+      <footer>Internal use only - please don't share this page with customers. Maintained by ${esc(r.contact)}.</footer>`;
+
+    const btn = $('#toggleAll');
+    btn.onclick = () => {
+      const ds = [...document.querySelectorAll('#faq details')];
+      const open = !ds.every(d => d.open);
+      ds.forEach(d => d.open = open);
+      btn.textContent = open ? 'Collapse all' : 'Expand all';
+    };
+  }
+
+  function hl(text, terms){
+    let out = esc(text);
+    terms.forEach(t => { if(t) out = out.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi'), '<mark>$1</mark>'); });
+    return out;
+  }
+
+  function renderSearch(qs){
+    const terms = qs.toLowerCase().split(/\s+/).filter(Boolean);
+    const match = s => terms.every(t => s.toLowerCase().includes(t));
+    const hits = [];
+    R.forEach(r => {
+      r.changes.forEach(c => { if(match(c.title+' '+c.detail+' '+(c.tickets||[]).join(' '))) hits.push({r, where:"What's changing", title:c.title, body:c.detail}); });
+      r.faq.forEach(g => g.items.forEach(it => { if(match(it.q+' '+it.a+' '+g.group)) hits.push({r, where:'Quick reference - '+g.group, title:it.q, body:it.a}); }));
+      r.articles.forEach(a => { if(match(a.title+' '+a.note)) hits.push({r, where:'Support Center article', title:a.title, body:a.note}); });
+      (r.knownIssues||[]).forEach(k => { if(match(k.title+' '+k.detail)) hits.push({r, where:'Known issue', title:k.title, body:k.detail}); });
+    });
+    $('#main').innerHTML = `<section class="card"><h2>Search results</h2>
+      <p class="res-h">${hits.length} result${hits.length===1?'':'s'} for "${esc(qs)}" across all releases</p>
+      ${hits.length ? hits.map(h=>`<div class="hit"><div class="where"><a href="#${h.r.id}">${esc(h.r.label)}</a> &middot; ${esc(h.where)}</div><div class="q">${hl(h.title,terms)}</div><div class="a">${hl(h.body,terms)}</div></div>`).join('') : '<p class="empty">Nothing matched. Try fewer words.</p>'}
+    </section>`;
+  }
+
+  function route(){
+    const qs = $('#q').value.trim();
+    const id = currentId();
+    renderNav(id);
+    if(qs) renderSearch(qs); else renderRelease(id);
+  }
+
+  // highlight the section in view
+  const tocLinks = () => [...document.querySelectorAll('#toc a')];
+  window.addEventListener('scroll', () => {
+    let cur = 'changes';
+    ['changes','articles','faq','issues'].forEach(s => { const el = document.getElementById(s); if(el && el.getBoundingClientRect().top < 140) cur = s; });
+    tocLinks().forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#'+cur));
+  }, {passive:true});
+  // keep release in the hash when using "On this page"
+  document.getElementById('toc').addEventListener('click', e => {
+    const a = e.target.closest('a'); if(!a) return;
+    e.preventDefault();
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if(el) el.scrollIntoView({behavior:'smooth'});
+  });
+
+  $('#q').addEventListener('input', route);
+  // release links (sidebar, mobile pills, search results) always leave search mode
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#r"]');
+    if(a && $('#q').value){ $('#q').value=''; setTimeout(route,0); }
+  });
+  window.addEventListener('hashchange', () => { $('#q').value=''; route(); window.scrollTo(0,0); });
+  route();
+})();
+</script>
+</body>
+</html>
