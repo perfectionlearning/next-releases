@@ -9,7 +9,7 @@ window.RELEASES = [
     status: "upcoming",
     dates: "Targeted for 10/24 - 10/25",
     note: "Not on prod yet - goes out if testing holds.",
-    updated: "10/22/2026",
+    updated: "10/23/2026",
     contact: "Katrina Keay",
 
     changes: [
@@ -32,8 +32,8 @@ window.RELEASES = [
         detail: "Sections with nothing to answer end with a Mark as Complete button. No pop-up.",
         tickets: ["PN-2379", "PN-2258"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices shuffle correctly in Algebra & Trigonometry 5E. Admin Add forms no longer fill in the admin's own login.",
-        tickets: ["PN-2258", "PN-2352", "PN-2348", "PN-2386", "PN-2308"] }
+        detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices on randomized Algebra & Trigonometry 5E questions now shuffle for each student (new assignments only). Admin Add forms no longer fill in the admin's own login. Teachers in more than one school - a new class now goes to the school they switched to.",
+        tickets: ["PN-2258", "PN-2352", "PN-2348", "PN-2386", "PN-2308", "PN-2417"] }
     ],
 
     articles: [
@@ -46,7 +46,7 @@ window.RELEASES = [
 
     faq: [
       { group: "Sign in with Google and rostered accounts", items: [
-        { q: "\"I sign in with Google and can't change my password.\"",
+        { q: "\"I sign in with Google (or through Clever or Edlink) and can't change my password.\"",
           a: "They don't have a Next password - it's managed by their school's sign-in. The Password tab says \"Your password is managed by your school's sign-in.\" Perfection Learning can't reset it - send them to their district tech team." },
         { q: "\"I can't change my name or email.\" / \"I can't edit this student.\"",
           a: "Rostered accounts come from the school's roster sync, so changes are made in their SIS or roster system, not Next." },
@@ -85,7 +85,13 @@ window.RELEASES = [
 
     knownIssues: [
       { title: "Stop impersonation logs you out (District and School Admins).",
-        detail: "Sign back in. A fix is coming in a later release." }
+        detail: "Sign back in. A fix is coming in a later release." },
+      { title: "My Progress shows a completed Read section as Needs Grading.",
+        detail: "Read sections aren't graded - the student is done once they select Mark as Complete. A follow-up is being reviewed." },
+      { title: "Read assignments that were already stuck stay stuck.",
+        detail: "This release fixes new completions only. Cleanup of older stuck assignments comes later." },
+      { title: "Item Analysis answer-choice counts on randomized questions.",
+        detail: "Because answer choices now shuffle per student, the per-choice counts for randomized questions can be misleading. Use Correct / Incorrect instead. A fix is in a separate ticket." }
     ]
   }
 ];
