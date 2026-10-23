@@ -29,7 +29,7 @@ window.RELEASES = [
         detail: "The Text to Speech checkbox on Add/Edit Class is gone. Test-player Text to Speech is now set per student and is off by default.",
         tickets: ["PN-872"] },
       { area: "Assignments", title: "Read sections - Mark as Complete",
-        detail: "Sections with nothing to answer end with a Mark as Complete button. No pop-up.",
+        detail: "Sections with nothing to answer (most Read sections and some unit openers) end with a Mark as Complete button. No pop-up. Sections with a question or response box still end with Submit.",
         tickets: ["PN-2379", "PN-2258"] },
       { area: "Fixes", title: "Fixes",
         detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices on randomized Algebra & Trigonometry 5E questions now shuffle for each student (new assignments only). Admin Add forms no longer fill in the admin's own login. Teachers in more than one school - a new class now goes to the school they switched to.",
@@ -79,7 +79,9 @@ window.RELEASES = [
         { q: "\"Where's the 'I have completed reading' checkbox?\"",
           a: "Replaced by Mark as Complete. No pop-up - the bar shows the date and \"You marked this section complete.\"" },
         { q: "\"Why does Read show 0 points or Not Graded?\"",
-          a: "Read sections aren't scored. The gradebook shows a check with 0 points." }
+          a: "Read sections aren't scored. The gradebook shows a check with 0 points." },
+        { q: "\"Why does this section say Submit instead of Mark as Complete?\"",
+          a: "Mark as Complete only shows on sections with nothing to answer. If a section has a question or response box (for example, the Connections Reading Grade 6 Unit 1 Opener asks students to write a definition of friend), it keeps Submit. Submit stays grayed out until the student answers." }
       ]}
     ],
 
