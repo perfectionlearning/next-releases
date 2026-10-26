@@ -4,6 +4,47 @@
 
 window.RELEASES = [
   {
+    id: "r26-3",
+    label: "R26.3",
+    status: "upcoming",
+    dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
+    note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move.",
+    updated: "10/26/2026",
+    contact: "Katrina Keay",
+
+    changes: [
+      { area: "Teachers", title: "Assessment Builder v2",
+        detail: "Updated Assessment Builder, including a question type filter and usability fixes from review.",
+        tickets: ["PN-2230", "PN-2392"] },
+      { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
+        detail: "Keyboard and screen reader access to Immersive Reader, Text to Speech, the table of contents and page links. Immersive Reader and Text to Speech get their own buttons in the eBook toolbar, so all users will see them.",
+        tickets: ["PN-2396"] },
+      { area: "Admins", title: "Manage Licenses cleanup",
+        detail: "District and school license views show the product name from the order, add a Grade/Level column, combine duplicate license rows into one total, and label integration licenses.",
+        tickets: ["PN-2058"] },
+      { area: "Sign-in", title: "RapidIdentity sign-in for Cypress-Fairbanks ISD",
+        detail: "One district: users can sign in through RapidIdentity, while classes, rosters and grades stay with Schoology.",
+        tickets: ["PN-2380"] },
+      { area: "Internal", title: "Impersonate User for Perfection Learning staff",
+        detail: "PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
+        tickets: ["PN-2072"] },
+      { area: "Fixes", title: "Fixes",
+        detail: "Wiley Algebra & Trigonometry 5E questions no longer show A as the correct answer on most items in the Assessment Builder. My Progress no longer shows a completed Read section as Needs Grading. Admin Add forms no longer suggest saved usernames.",
+        tickets: ["PN-2429", "PN-2438", "PN-2430"] }
+    ],
+
+    articles: [
+      { title: "How to Use the Assessment Builder", note: "New - in progress", url: null },
+      { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - drafted, waiting on PN-2390", url: null },
+      { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null },
+      { title: "Using eBooks on Perfection Next", note: "Update if the toolbar buttons ship", url: null }
+    ],
+
+    faq: [],
+
+    knownIssues: []
+  },
+  {
     id: "r26-2",
     label: "R26.2",
     status: "released",
