@@ -6,10 +6,10 @@ window.RELEASES = [
   {
     id: "r26-2",
     label: "R26.2",
-    status: "upcoming",
-    dates: "Targeted for 10/24 - 10/25",
-    note: "Not on prod yet - goes out if testing holds.",
-    updated: "10/23/2026",
+    status: "released",
+    dates: "Released 10/25/2026",
+    note: "Live on prod. Support Center articles below are published.",
+    updated: "10/26/2026",
     contact: "Katrina Keay",
 
     changes: [
@@ -37,11 +37,12 @@ window.RELEASES = [
     ],
 
     articles: [
-      { title: "District Admin Setup Guide", note: "Updated - Class Dashboard, classes, Manage Schools settings", url: null },
-      { title: "School Admin Setup Guide", note: "Updated - classes, Manage Schools settings", url: null },
-      { title: "Signing in with Google (Google Classroom)", note: "New - signing in, no Next password, what can't be changed", url: null },
-      { title: "Setting a Student's Immersive Reader Accessibility Options", note: "Updated - per-student Text to Speech", url: null },
-      { title: "Creating an Assignment / Using the Interactive Edition", note: "Updated - Mark as Complete on Read sections", url: null }
+      { title: "Getting Started for District Administrators", note: "Updated - Class Dashboard, classes, Manage Schools settings", url: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
+      { title: "Getting Started Guide for School Administrators", note: "Updated - classes, Manage Schools settings", url: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
+      { title: "Signing in with Google (Google Classroom)", note: "New - signing in, no Next password, what can't be changed", url: "https://support.perfectionlearning.com/en/articles/17666490-signing-in-with-google-google-classroom" },
+      { title: "Setting a Student's Immersive Reader Accessibility Options", note: "Updated - per-student Text to Speech", url: "https://support.perfectionlearning.com/en/articles/16992454-setting-a-student-s-immersive-reader-accessibility-options" },
+      { title: "Using the Interactive Edition", note: "Updated - Mark as Complete on Read sections, Teachers Can Add Students off", url: "https://support.perfectionlearning.com/en/articles/9921749-using-the-interactive-edition" },
+      { title: "Creating an Assignment in Perfection Next", note: "Updated - Mark as Complete on Read sections", url: "https://support.perfectionlearning.com/en/articles/16978816-creating-an-assignment-in-perfection-next" }
     ],
 
     faq: [
