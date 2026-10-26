@@ -14,7 +14,7 @@ window.RELEASES = [
 
     changes: [
       { area: "Teachers", title: "Assessment Builder v2",
-        detail: "Updated Assessment Builder, including a question type filter and usability fixes from review.",
+        detail: "Updated Assessment Builder, including a question type filter and usability fixes from review. Goes out only if testing finishes this week.",
         tickets: ["PN-2230", "PN-2392"] },
       { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
         detail: "Keyboard and screen reader access to Immersive Reader, Text to Speech, the table of contents and page links. Immersive Reader and Text to Speech get their own buttons in the eBook toolbar, so all users will see them.",
