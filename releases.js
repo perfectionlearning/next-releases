@@ -118,6 +118,8 @@ window.RELEASES = [
 
     faq: [
       { group: "Sign in with Google and rostered accounts", items: [
+        { q: "\"I clicked Sign in with Google and got 'There was an error signing you in.'\"",
+          a: "Sign in with Google only works at Google Classroom schools connected to Next, with the school Google account. A personal Gmail, or a school that isn't connected, lands on this Edlink error page (400). Have them sign in with their Next username and password instead. Forgot password on the login page resets the Next password, not Google's." },
         { q: "\"I sign in with Google (or through Clever or Edlink) and can't change my password.\"",
           a: "They don't have a Next password - it's managed by their school's sign-in. The Password tab says \"Your password is managed by your school's sign-in.\" Perfection Learning can't reset it - send them to their district tech team." },
         { q: "\"I can't change my name or email.\" / \"I can't edit this student.\"",
@@ -158,6 +160,8 @@ window.RELEASES = [
     ],
 
     knownIssues: [
+      { title: "The login page doesn't say Sign in with Google is only for Google Classroom schools.",
+        detail: "Users with a personal Gmail or at a school that isn't connected may try it and get an error page. Forgot password sits under the Google button but resets the Next password. A login-page fix is in progress." },
       { title: "Stop impersonation logs you out (District and School Admins).",
         detail: "Sign back in. A fix is coming in a later release." },
       { title: "My Progress shows a completed Read section as Needs Grading.",
