@@ -51,6 +51,8 @@
   .hero .pill{background:#fff}
   .hero .pill.upcoming{color:var(--amber-ink)} .hero .pill.released{color:var(--green)}
   .hero p{margin:6px 0 0;opacity:.95}
+  .hero .sum{margin:12px 0 0;padding:12px 14px;background:rgba(255,255,255,.14);border-radius:8px;font-size:15px;line-height:1.55;opacity:1}
+  .hero .sum b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:2px}
   .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:13px;opacity:.92}
   .meta b{font-weight:600}
   /* sections */
@@ -220,6 +222,7 @@
       <div class="hero">
         <div class="row"><h1>${esc(r.label)}</h1><span class="pill ${r.status}">${statusLabel(r.status)}</span></div>
         <p>${esc(r.dates)}${r.note ? ' - ' + esc(r.note) : ''}</p>
+        ${r.summary ? `<p class="sum"><b>In short</b>${esc(r.summary)}</p>` : ''}
         <div class="meta"><span><b>Updated</b> ${esc(r.updated)}</span><span><b>Questions</b> ${esc(r.contact)}</span></div>
       </div>
       <section class="card" id="changes"><h2>What's changing</h2><p class="sub">What teachers, students and admins will see.</p><div class="changes">${changes}</div></section>

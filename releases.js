@@ -1,6 +1,7 @@
 // Next Releases - release data.
 // Newest release first. To add a release, copy the R26.2 block, put it on top and edit it.
 // status: "upcoming" or "released". url: null until the article is live.
+// summary: 1-2 sentences shown at the top - the short version of what's changing.
 // screenshots: groups, one per change. Put images in img/<release id>/ and list them under a group's shots (file, label).
 
 window.RELEASES = [
@@ -10,6 +11,7 @@ window.RELEASES = [
     status: "upcoming",
     dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
     note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move.",
+    summary: "Planned: an updated Assessment Builder (if testing finishes this week), screen reader fixes in Connections eBooks, a cleaner Manage Licenses view for admins, RapidIdentity sign-in for Cypress-Fairbanks ISD, and a few fixes.",
     updated: "10/26/2026",
     contact: "Katrina Keay",
 
@@ -53,6 +55,7 @@ window.RELEASES = [
     status: "released",
     dates: "Released 10/25/2026",
     note: "Live on prod. Support Center articles below are published.",
+    summary: "Admins with classes now land on the Class Dashboard and can create classes. Schools get two new settings - Teachers Can Add Students and Teachers Can Self-Register. Google Classroom schools can sign in with Google, and rostered account details are read-only. Test-player Text to Speech is now set per student (off by default), and Read sections end with Mark as Complete.",
     updated: "10/26/2026",
     contact: "Katrina Keay",
 
