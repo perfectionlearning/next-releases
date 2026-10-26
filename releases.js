@@ -1,7 +1,7 @@
 // Next Releases - release data.
 // Newest release first. To add a release, copy the R26.2 block, put it on top and edit it.
 // status: "upcoming" or "released". url: null until the article is live.
-// screenshots: put the image in img/<release id>/ and list it here (file, area, title, caption, article link).
+// screenshots: groups, one per change. Put images in img/<release id>/ and list them under a group's shots (file, label).
 
 window.RELEASES = [
   {
@@ -90,30 +90,38 @@ window.RELEASES = [
     ],
 
     screenshots: [
-      { file: "img/r26-2/da-class-dashboard.png", area: "Admins", title: "Class Dashboard - District Admin",
-        caption: "DAs with classes land here at login, with School, Teacher and Class menus at the top.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
-      { file: "img/r26-2/da-products-school-menu.png", area: "Admins", title: "Instructional Material - School menu (DA)",
-        caption: "DAs pick a school before Program and Categories.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
-      { file: "img/r26-2/da-manage-schools.png", area: "Admins", title: "Manage Schools - District Admin",
-        caption: "Teachers Can Add Students and Teachers Can Self-Register for each school. Both default to On.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
-      { file: "img/r26-2/da-add-class.png", area: "Admins", title: "Add Class - District Admin",
-        caption: "School and Teacher menus, with the admin's own name selected.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
-      { file: "img/r26-2/sa-class-dashboard.png", area: "Admins", title: "Class Dashboard - School Admin",
-        caption: "SAs with classes land here at login, with Teacher and Class menus.", article: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
-      { file: "img/r26-2/sa-manage-schools.png", area: "Admins", title: "Manage Schools - School Admin",
-        caption: "The same two settings for the SA's own school.", article: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
-      { file: "img/r26-2/sa-add-class.png", area: "Admins", title: "Add Class - School Admin",
-        caption: "Teacher menu, with the admin's own name selected.", article: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
-      { file: "img/r26-2/da-accessibility-options.png", area: "Students", title: "Accessibility Options - admin view",
-        caption: "DAs and SAs see the same Accessibility Options tab teachers do, including Assessment Player Options.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
-      { file: "img/r26-2/ir-03-accessibility-options-top.png", area: "Students", title: "Accessibility Options tab - teacher view",
-        caption: "Manage > Students > student > Accessibility Options. Immersive Reader settings at the top.", article: "https://support.perfectionlearning.com/en/articles/16992454-setting-a-student-s-immersive-reader-accessibility-options" },
-      { file: "img/r26-2/ir-04-assessment-player-options.png", area: "Students", title: "Assessment Player Options - Text to Speech",
-        caption: "Test-player Text to Speech is set per student and is off by default.", article: "https://support.perfectionlearning.com/en/articles/16992454-setting-a-student-s-immersive-reader-accessibility-options" },
-      { file: "img/r26-2/ie-mark-complete-before.png", area: "Assignments", title: "Mark as Complete - before",
-        caption: "Sections with nothing to answer end with a Mark as Complete button.", article: "https://support.perfectionlearning.com/en/articles/9921749-using-the-interactive-edition" },
-      { file: "img/r26-2/ie-mark-complete-after.png", area: "Assignments", title: "Mark as Complete - after",
-        caption: "No pop-up. The bar shows Date Completed and \"You marked this section complete.\"", article: "https://support.perfectionlearning.com/en/articles/9921749-using-the-interactive-edition" }
+      { area: "Admins", title: "District and School Admins with classes",
+        caption: "Admins with classes land on the Class Dashboard and can add classes. DAs pick a school on the dashboard, Add Class and Instructional Material.",
+        articles: [{ label: "DA guide", url: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" }, { label: "SA guide", url: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" }],
+        shots: [
+          { file: "img/r26-2/da-class-dashboard.png", label: "Class Dashboard - DA" },
+          { file: "img/r26-2/sa-class-dashboard.png", label: "Class Dashboard - SA" },
+          { file: "img/r26-2/da-add-class.png", label: "Add Class - DA" },
+          { file: "img/r26-2/sa-add-class.png", label: "Add Class - SA" },
+          { file: "img/r26-2/da-products-school-menu.png", label: "Instructional Material - DA school menu" }
+        ] },
+      { area: "Admins", title: "New Manage Schools settings",
+        caption: "Teachers Can Add Students and Teachers Can Self-Register for each school. Both default to On.",
+        articles: [{ label: "DA guide", url: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" }, { label: "SA guide", url: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" }],
+        shots: [
+          { file: "img/r26-2/da-manage-schools.png", label: "Manage Schools - DA" },
+          { file: "img/r26-2/sa-manage-schools.png", label: "Manage Schools - SA" }
+        ] },
+      { area: "Students", title: "Student accessibility options",
+        caption: "Test-player Text to Speech is set per student under Assessment Player Options and is off by default.",
+        articles: [{ label: "Accessibility Options", url: "https://support.perfectionlearning.com/en/articles/16992454-setting-a-student-s-immersive-reader-accessibility-options" }],
+        shots: [
+          { file: "img/r26-2/ir-03-accessibility-options-top.png", label: "Accessibility Options tab - teacher" },
+          { file: "img/r26-2/ir-04-assessment-player-options.png", label: "Assessment Player Options" },
+          { file: "img/r26-2/da-accessibility-options.png", label: "Accessibility Options - DA/SA" }
+        ] },
+      { area: "Assignments", title: "Read sections - Mark as Complete",
+        caption: "Sections with nothing to answer end with Mark as Complete. No pop-up - the bar then shows the date and \"You marked this section complete.\"",
+        articles: [{ label: "Using the Interactive Edition", url: "https://support.perfectionlearning.com/en/articles/9921749-using-the-interactive-edition" }],
+        shots: [
+          { file: "img/r26-2/ie-mark-complete-before.png", label: "Before" },
+          { file: "img/r26-2/ie-mark-complete-after.png", label: "After" }
+        ] }
     ],
 
     faq: [
