@@ -79,8 +79,8 @@ window.RELEASES = [
         detail: "Sections with nothing to answer (most Read sections and some unit openers) end with a Mark as Complete button. No pop-up. Sections with a question or response box still end with Submit.",
         tickets: ["PN-2379", "PN-2258"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices on randomized Algebra & Trigonometry 5E questions now shuffle for each student (new assignments only). Admin Add forms no longer fill in the admin's own login. Teachers in more than one school - a new class now goes to the school they switched to.",
-        tickets: ["PN-2258", "PN-2352", "PN-2348", "PN-2386", "PN-2308", "PN-2417"] }
+        detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices on randomized Algebra & Trigonometry 5E questions now shuffle for each student (new assignments only). Admin Add forms no longer fill in the admin's own login. Teachers in more than one school - a new class now goes to the school they switched to. Clicking an assignment title opens View Assignment - Grade Assignment is in the Actions menu. Multi-part questions with randomized values show the same numbers in the question as in its parts. Assignments no longer stay in To Do after a student submits every section.",
+        tickets: ["PN-2258", "PN-2352", "PN-2348", "PN-2386", "PN-2308", "PN-2417", "PN-2405", "PN-2398", "PN-2427"] }
     ],
 
     articles: [
@@ -167,6 +167,10 @@ window.RELEASES = [
           a: "Read sections aren't scored. The gradebook shows a check with 0 points." },
         { q: "\"Why does this section say Submit instead of Mark as Complete?\"",
           a: "Mark as Complete only shows on sections with nothing to answer. If a section has a question or response box (for example, the Connections Reading Grade 6 Unit 1 Opener asks students to write a definition of friend), it keeps Submit. Submit stays grayed out until the student answers." }
+      ]},
+      { group: "Assignments", items: [
+        { q: "\"Clicking my assignment doesn't open grading anymore.\"",
+          a: "Clicking the assignment title now opens View Assignment. To grade, open the Actions menu and select Grade Assignment." }
       ]}
     ],
 
