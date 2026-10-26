@@ -1,6 +1,7 @@
 // Next Releases - release data.
 // Newest release first. To add a release, copy the R26.2 block, put it on top and edit it.
 // status: "upcoming" or "released". url: null until the article is live.
+// screenshots: put the image in img/<release id>/ and list it here (file, area, title, caption, article link).
 
 window.RELEASES = [
   {
@@ -39,6 +40,8 @@ window.RELEASES = [
       { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null },
       { title: "Using eBooks on Perfection Next", note: "Update if the toolbar buttons ship", url: null }
     ],
+
+    screenshots: [],
 
     faq: [],
 
@@ -86,10 +89,35 @@ window.RELEASES = [
       { title: "Creating an Assignment in Perfection Next", note: "Updated - Mark as Complete on Read sections", url: "https://support.perfectionlearning.com/en/articles/16978816-creating-an-assignment-in-perfection-next" }
     ],
 
+    screenshots: [
+      { file: "img/r26-2/da-class-dashboard.png", area: "Admins", title: "Class Dashboard - District Admin",
+        caption: "DAs with classes land here at login, with School, Teacher and Class menus at the top.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
+      { file: "img/r26-2/da-products-school-menu.png", area: "Admins", title: "Instructional Material - School menu (DA)",
+        caption: "DAs pick a school before Program and Categories.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
+      { file: "img/r26-2/da-manage-schools.png", area: "Admins", title: "Manage Schools - District Admin",
+        caption: "Teachers Can Add Students and Teachers Can Self-Register for each school. Both default to On.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
+      { file: "img/r26-2/da-add-class.png", area: "Admins", title: "Add Class - District Admin",
+        caption: "School and Teacher menus, with the admin's own name selected.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
+      { file: "img/r26-2/sa-class-dashboard.png", area: "Admins", title: "Class Dashboard - School Admin",
+        caption: "SAs with classes land here at login, with Teacher and Class menus.", article: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
+      { file: "img/r26-2/sa-manage-schools.png", area: "Admins", title: "Manage Schools - School Admin",
+        caption: "The same two settings for the SA's own school.", article: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
+      { file: "img/r26-2/sa-add-class.png", area: "Admins", title: "Add Class - School Admin",
+        caption: "Teacher menu, with the admin's own name selected.", article: "https://support.perfectionlearning.com/en/articles/16603361-getting-started-guide-for-school-administrators" },
+      { file: "img/r26-2/da-accessibility-options.png", area: "Students", title: "Accessibility Options - admin view",
+        caption: "DAs and SAs see the same Accessibility Options tab teachers do, including Assessment Player Options.", article: "https://support.perfectionlearning.com/en/articles/16805856-getting-started-for-district-administrators" },
+      { file: "img/r26-2/ir-03-accessibility-options-top.png", area: "Students", title: "Accessibility Options tab - teacher view",
+        caption: "Manage > Students > student > Accessibility Options. Immersive Reader settings at the top.", article: "https://support.perfectionlearning.com/en/articles/16992454-setting-a-student-s-immersive-reader-accessibility-options" },
+      { file: "img/r26-2/ir-04-assessment-player-options.png", area: "Students", title: "Assessment Player Options - Text to Speech",
+        caption: "Test-player Text to Speech is set per student and is off by default.", article: "https://support.perfectionlearning.com/en/articles/16992454-setting-a-student-s-immersive-reader-accessibility-options" },
+      { file: "img/r26-2/ie-mark-complete-before.png", area: "Assignments", title: "Mark as Complete - before",
+        caption: "Sections with nothing to answer end with a Mark as Complete button.", article: "https://support.perfectionlearning.com/en/articles/9921749-using-the-interactive-edition" },
+      { file: "img/r26-2/ie-mark-complete-after.png", area: "Assignments", title: "Mark as Complete - after",
+        caption: "No pop-up. The bar shows Date Completed and \"You marked this section complete.\"", article: "https://support.perfectionlearning.com/en/articles/9921749-using-the-interactive-edition" }
+    ],
+
     faq: [
       { group: "Sign in with Google and rostered accounts", items: [
-        { q: "\"I clicked Sign in with Google and got 'There was an error signing you in.'\"",
-          a: "Sign in with Google only works at Google Classroom schools connected to Next, with the school Google account. A personal Gmail, or a school that isn't connected, lands on this Edlink error page (400). Have them sign in with their Next username and password instead. Forgot password on the login page resets the Next password, not Google's." },
         { q: "\"I sign in with Google (or through Clever or Edlink) and can't change my password.\"",
           a: "They don't have a Next password - it's managed by their school's sign-in. The Password tab says \"Your password is managed by your school's sign-in.\" Perfection Learning can't reset it - send them to their district tech team." },
         { q: "\"I can't change my name or email.\" / \"I can't edit this student.\"",
@@ -130,8 +158,6 @@ window.RELEASES = [
     ],
 
     knownIssues: [
-      { title: "The login page doesn't say Sign in with Google is only for Google Classroom schools.",
-        detail: "Users with a personal Gmail or at a school that isn't connected may try it and get an error page. Forgot password sits under the Google button but resets the Next password. A login-page fix is in progress." },
       { title: "Stop impersonation logs you out (District and School Admins).",
         detail: "Sign back in. A fix is coming in a later release." },
       { title: "My Progress shows a completed Read section as Needs Grading.",
