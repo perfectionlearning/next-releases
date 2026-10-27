@@ -12,7 +12,7 @@ window.RELEASES = [
     dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
     note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move. Assessment Builder v2 moved to R26.4 (Jesse 10/26). Screenshots are from QA1 and may change before release.",
     summary: "Planned: screen reader fixes in Connections eBooks, a cleaner Manage Licenses view for admins, RapidIdentity sign-in for Cypress-Fairbanks ISD, and a few fixes. The updated Assessment Builder moved to R26.4.",
-    updated: "10/26/2026",
+    updated: "10/27/2026",
     contact: "Katrina Keay",
 
     changes: [
@@ -29,8 +29,8 @@ window.RELEASES = [
         detail: "PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
         tickets: ["PN-2072"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Wiley Algebra & Trigonometry 5E questions in the Assessment Builder will no longer show A as the correct answer on most items. Also planned, if they make the release: My Progress will no longer show a completed Read section as Needs Grading, and Admin Add forms will no longer suggest saved usernames.",
-        tickets: ["PN-2429", "PN-2438", "PN-2430"] }
+        detail: "Wiley Algebra & Trigonometry 5E questions in the Assessment Builder will no longer show A as the correct answer on most items. Also planned, if it makes the release: Admin Add forms will no longer suggest saved usernames.",
+        tickets: ["PN-2429", "PN-2430"] }
     ],
 
     articles: [
@@ -68,9 +68,7 @@ window.RELEASES = [
       { title: "Include Randomized Variable Questions (until PN-2390 is on prod).",
         detail: "When checked, Automatic builds with only randomized questions. Teachers who want a mix can use Manual." },
       { title: "Stop impersonation logs you out (District and School Admins).",
-        detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." },
-      { title: "My Progress shows a completed Read section as Needs Grading (if PN-2438 doesn't ship).",
-        detail: "Read sections aren't graded - the student is done once they select Mark as Complete." }
+        detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." }
     ]
   },
   {
@@ -80,7 +78,7 @@ window.RELEASES = [
     dates: "Released 10/25/2026",
     note: "Live on prod. Support Center articles below are published.",
     summary: "Admins with classes now land on the Class Dashboard and can create classes. Schools get two new settings - Teachers Can Add Students and Teachers Can Self-Register. Google Classroom schools can sign in with Google, and rostered account details are read-only. Test-player Text to Speech is now set per student (off by default), and Read sections end with Mark as Complete.",
-    updated: "10/26/2026",
+    updated: "10/27/2026",
     contact: "Katrina Keay",
 
     changes: [
@@ -103,8 +101,8 @@ window.RELEASES = [
         detail: "Sections with nothing to answer (most Read sections and some unit openers) end with a Mark as Complete button. No pop-up. Sections with a question or response box still end with Submit.",
         tickets: ["PN-2379", "PN-2258"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices on randomized Algebra & Trigonometry 5E questions now shuffle for each student (new assignments only). Admin Add forms no longer fill in the admin's own login. Teachers in more than one school - a new class now goes to the school they switched to. Clicking an assignment title opens View Assignment - Grade Assignment is in the Actions menu. Multi-part questions with randomized values show the same numbers in the question as in its parts. Assignments no longer stay in To Do after a student submits every section.",
-        tickets: ["PN-2258", "PN-2352", "PN-2348", "PN-2386", "PN-2308", "PN-2417", "PN-2405", "PN-2398", "PN-2427"] }
+        detail: "Teachers can view student work in Read sections again. Show Answers keeps line breaks. The view mode stays selected between sub-lessons. Answer choices on randomized Algebra & Trigonometry 5E questions now shuffle for each student (new assignments only). Admin Add forms no longer fill in the admin's own login. Teachers in more than one school - a new class now goes to the school they switched to. Clicking an assignment title opens View Assignment - Grade Assignment is in the Actions menu. Multi-part questions with randomized values show the same numbers in the question as in its parts. Assignments no longer stay in To Do after a student submits every section. Fixed 10/26 after the release: My Progress no longer shows a completed Read section (or other no-point assignment) as Needs Grading.",
+        tickets: ["PN-2258", "PN-2352", "PN-2348", "PN-2386", "PN-2308", "PN-2417", "PN-2405", "PN-2398", "PN-2427", "PN-2438"] }
     ],
 
     articles: [
@@ -203,8 +201,6 @@ window.RELEASES = [
         detail: "Users with a personal Gmail or at a school that isn't connected may try it and get an error page. Forgot password sits under the Google button but resets the Next password. A login-page fix is in progress." },
       { title: "Stop impersonation logs you out (District and School Admins).",
         detail: "Sign back in. A fix is coming in a later release." },
-      { title: "My Progress shows a completed Read section as Needs Grading.",
-        detail: "Read sections aren't graded - the student is done once they select Mark as Complete. A follow-up is being reviewed." },
       { title: "Read assignments that were already stuck stay stuck.",
         detail: "This release fixes new completions only. Cleanup of older stuck assignments comes later." },
       { title: "Item Analysis answer-choice counts on randomized questions.",
