@@ -10,15 +10,12 @@ window.RELEASES = [
     label: "R26.3",
     status: "upcoming",
     dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
-    note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move.",
-    summary: "Planned: an updated Assessment Builder (if testing finishes this week), screen reader fixes in Connections eBooks, a cleaner Manage Licenses view for admins, RapidIdentity sign-in for Cypress-Fairbanks ISD, and a few fixes.",
+    note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move. Assessment Builder v2 moved to R26.4 (Jesse 10/26). Screenshots are from QA1 and may change before release.",
+    summary: "Planned: screen reader fixes in Connections eBooks, a cleaner Manage Licenses view for admins, RapidIdentity sign-in for Cypress-Fairbanks ISD, and a few fixes. The updated Assessment Builder moved to R26.4.",
     updated: "10/26/2026",
     contact: "Katrina Keay",
 
     changes: [
-      { area: "Teachers", title: "Assessment Builder v2",
-        detail: "Updated Assessment Builder, including a question type filter and usability fixes from review. Goes out only if testing finishes this week.",
-        tickets: ["PN-2230", "PN-2392"] },
       { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
         detail: "Keyboard and screen reader access to Immersive Reader, Text to Speech, the table of contents and page links. Immersive Reader and Text to Speech get their own buttons in the eBook toolbar, so all users will see them.",
         tickets: ["PN-2396"] },
@@ -32,22 +29,49 @@ window.RELEASES = [
         detail: "PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
         tickets: ["PN-2072"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Wiley Algebra & Trigonometry 5E questions no longer show A as the correct answer on most items in the Assessment Builder. My Progress no longer shows a completed Read section as Needs Grading. Admin Add forms no longer suggest saved usernames.",
+        detail: "Wiley Algebra & Trigonometry 5E questions in the Assessment Builder will no longer show A as the correct answer on most items. Also planned, if they make the release: My Progress will no longer show a completed Read section as Needs Grading, and Admin Add forms will no longer suggest saved usernames.",
         tickets: ["PN-2429", "PN-2438", "PN-2430"] }
     ],
 
     articles: [
-      { title: "How to Use the Assessment Builder", note: "New - in progress", url: null },
       { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - drafted, waiting on PN-2390", url: null },
       { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null },
-      { title: "Using eBooks on Perfection Next", note: "Update if the toolbar buttons ship", url: null }
+      { title: "Using eBooks on Perfection Next", note: "Update if the toolbar buttons ship", url: null },
+      { title: "Accessibility Features with Immersive Reader", note: "Update how to open Immersive Reader if the toolbar buttons ship", url: null }
     ],
 
-    screenshots: [],
+    screenshots: [
+      { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
+        caption: "From QA1. Immersive Reader and Text to Speech buttons in the eBook toolbar, next to Notebook and Bookmarks.",
+        articles: [],
+        shots: [
+          { file: "img/r26-3/ebook-toolbar-ir-tts.png", label: "eBook toolbar - Immersive Reader and Text to Speech" }
+        ] }
+    ],
 
-    faq: [],
+    faq: [
+      { group: "eBooks and screen readers", items: [
+        { q: "\"Where did the Immersive Reader button go?\"",
+          a: "It's in the eBook toolbar at the top, next to Notebook and Bookmarks, with Text to Speech beside it." },
+        { q: "\"F9 in Edge doesn't open Immersive Reader.\"",
+          a: "F9 opens Edge's own reader, which can't read our eBook pages because they display as images. Use the Immersive Reader button in the eBook toolbar." },
+        { q: "\"JAWS can't read the page.\"",
+          a: "eBook pages display as images, so JAWS can't read them directly. Students can Tab to Immersive Reader (or press B in JAWS) and use Read Aloud there." }
+      ]},
+      { group: "Cypress-Fairbanks ISD sign-in", items: [
+        { q: "\"Which sign-in do CyFair users use?\"",
+          a: "Either RapidIdentity or Schoology - both reach the same account. Classes, rosters and grades come only from Schoology." }
+      ]}
+    ],
 
-    knownIssues: []
+    knownIssues: [
+      { title: "Include Randomized Variable Questions (until PN-2390 is on prod).",
+        detail: "When checked, Automatic builds with only randomized questions. Teachers who want a mix can use Manual." },
+      { title: "Stop impersonation logs you out (District and School Admins).",
+        detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." },
+      { title: "My Progress shows a completed Read section as Needs Grading (if PN-2438 doesn't ship).",
+        detail: "Read sections aren't graded - the student is done once they select Mark as Complete." }
+    ]
   },
   {
     id: "r26-2",
