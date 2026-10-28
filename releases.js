@@ -10,31 +10,31 @@ window.RELEASES = [
     label: "R26.3",
     status: "upcoming",
     dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
-    note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move. Assessment Builder v2 moved to R26.4 (Jesse 10/26). Screenshots are from QA1 and may change before release.",
+    note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move. Assessment Builder v2 moved to R26.4 (Jesse 10/26). Screenshots are from QA1 and may change before release. Items marked (if it makes QA2) may move to a later release - QA2 cutoff is Thursday 10/29.",
     summary: "Planned: screen reader fixes in Connections eBooks, a cleaner Manage Licenses view for admins, RapidIdentity sign-in for Cypress-Fairbanks ISD, and a few fixes. The updated Assessment Builder moved to R26.4.",
-    updated: "10/27/2026",
+    updated: "10/28/2026",
     contact: "Katrina Keay",
 
     changes: [
       { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
-        detail: "Keyboard and screen reader access to Immersive Reader, Text to Speech, the table of contents and page links. Immersive Reader and Text to Speech get their own buttons in the eBook toolbar, so all users will see them.",
+        detail: "If it makes QA2 - Keyboard and screen reader access to Immersive Reader, Text to Speech, the table of contents and page links. Immersive Reader and Text to Speech get their own buttons in the eBook toolbar, so all users will see them.",
         tickets: ["PN-2396"] },
       { area: "Admins", title: "Manage Licenses cleanup",
-        detail: "District and school license views show the product name from the order, add a Grade/Level column, combine duplicate license rows into one total, and label integration licenses.",
+        detail: "If it makes QA2 - District and school license views show the product name from the order, add a Grade/Level column, combine duplicate license rows into one total, and label integration licenses.",
         tickets: ["PN-2058"] },
       { area: "Sign-in", title: "RapidIdentity sign-in for Cypress-Fairbanks ISD",
-        detail: "One district: users can sign in through RapidIdentity, while classes, rosters and grades stay with Schoology.",
+        detail: "If it makes QA2 - One district: users can sign in through RapidIdentity, while classes, rosters and grades stay with Schoology.",
         tickets: ["PN-2380"] },
       { area: "Internal", title: "Impersonate User for Perfection Learning staff",
-        detail: "PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
+        detail: "If it makes QA2 - PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
         tickets: ["PN-2072"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Wiley Algebra & Trigonometry 5E questions in the Assessment Builder will no longer show A as the correct answer on most items. Also planned, if it makes the release: Admin Add forms will no longer suggest saved usernames.",
-        tickets: ["PN-2429", "PN-2430"] }
+        detail: "AP U.S. History practice exams: Long Essay Questions with one prompt no longer show a Selected Prompt dropdown, so students can start typing right away, and the Practice Exam I LEQ shows its question again. Downloaded test PDFs stay portrait, with tables and answer boxes at normal size. Notebook entries stay put when a teacher switches Reading Selection tabs in Grade Assignment. Admin Add Students, Add Teachers and Add School Administrators forms no longer suggest saved usernames. Also planned, only if it makes QA2: Wiley Algebra & Trigonometry 5E answer order in the Assessment Builder.",
+        tickets: ["PN-2406", "PN-2426", "PN-1720", "PN-2346", "PN-2430", "PN-2429"] }
     ],
 
     articles: [
-      { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - drafted, waiting on PN-2390", url: null },
+      { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - live 10/27", url: "https://support.perfectionlearning.com/en/articles/17720695-wiley-assessment-builder-frequently-asked-questions" },
       { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null },
       { title: "Using eBooks on Perfection Next", note: "Update if the toolbar buttons ship", url: null },
       { title: "Accessibility Features with Immersive Reader", note: "Update how to open Immersive Reader if the toolbar buttons ship", url: null }
@@ -61,12 +61,26 @@ window.RELEASES = [
       { group: "Cypress-Fairbanks ISD sign-in", items: [
         { q: "\"Which sign-in do CyFair users use?\"",
           a: "Either RapidIdentity or Schoology - both reach the same account. Classes, rosters and grades come only from Schoology." }
+      ]},
+      { group: "Manage Licenses (if it makes QA2)", items: [
+        { q: "\"My license list looks different.\"",
+          a: "Rows for the same product are combined into one total, product names come from the order, and there's a new Grade/Level column. Integration licenses are labeled." },
+        { q: "\"Why can my school see district licenses?\"",
+          a: "Schools see licenses the district shares with them on the Manage Licenses screen." }
+      ]},
+      { group: "Impersonate User - for our team (if it makes QA2)", items: [
+        { q: "\"I searched by name and can't find the user.\"",
+          a: "Pick the district first - a name or email alone won't find the user yet." },
+        { q: "\"Does impersonating sign the customer out?\"",
+          a: "No - it doesn't affect the customer's own session. Stop impersonation takes you back to the user list." }
+      ]},
+      { group: "AP U.S. History practice exams", items: [
+        { q: "\"The Selected Prompt dropdown is gone.\"",
+          a: "Long Essay Questions with only one prompt no longer show the dropdown - the prompt shows and students can type right away." }
       ]}
     ],
 
     knownIssues: [
-      { title: "Include Randomized Variable Questions (until PN-2390 is on prod).",
-        detail: "When checked, Automatic builds with only randomized questions. Teachers who want a mix can use Manual." },
       { title: "Stop impersonation logs you out (District and School Admins).",
         detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." }
     ]
