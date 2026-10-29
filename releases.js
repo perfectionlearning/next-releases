@@ -10,15 +10,21 @@ window.RELEASES = [
     label: "R26.3",
     status: "upcoming",
     dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
-    note: "Not on prod yet - based on Jesse's 10/26 list. Items can still move. Assessment Builder v2 moved to R26.4 (Jesse 10/26). Screenshots are from QA1 and may change before release. Items marked (if it makes QA2) may move to a later release - QA2 cutoff is Thursday 10/29.",
-    summary: "Planned: screen reader fixes in Connections eBooks, a cleaner Manage Licenses view for admins, RapidIdentity sign-in for Cypress-Fairbanks ISD, and a few fixes. The updated Assessment Builder moved to R26.4.",
-    updated: "10/28/2026",
+    note: "Not on prod yet. Items can still move - anything marked (if it makes QA2) may go to a later release. Screen reader (JAWS) fixes for Connections eBooks and the updated Assessment Builder moved to R26.4. Screenshots are from QA1 and may change before release.",
+    summary: "Planned: Create Assignment shows the same options from any resource, with clearer tooltips; the login page explains who Sign in with Google is for; and several fixes. Also planned if they make QA2: a cleaner Manage Licenses view and RapidIdentity sign-in for Cypress-Fairbanks ISD.",
+    updated: "10/29/2026",
     contact: "Katrina Keay",
 
     changes: [
-      { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
-        detail: "If it makes QA2 - Keyboard and screen reader access to Immersive Reader, Text to Speech, the table of contents and page links. Immersive Reader and Text to Speech get their own buttons in the eBook toolbar, so all users will see them.",
-        tickets: ["PN-2396"] },
+      { area: "Assignments", title: "Create Assignment updates",
+        detail: "If it makes QA2 - Creating an assignment from an Interactive Edition or the Assessment Library shows the same options. Each option has a short tooltip, and a Learn more link opens the Creating an Assignment article. Allow students to review answers can be set to a number of days after the due date (after the end date when a Grace Period is on). With Weekdays selected, the start and due dates must be weekdays and the due time must be later than the start time. Grade 9 Benchmark sub-lessons now list in order.",
+        tickets: ["PN-2061"] },
+      { area: "Sign-in", title: "Login page - Sign in with Google",
+        detail: "If it makes QA2 - A line under Sign in with Google says it's only for schools that connected Google Classroom to Perfection Next, using a school Google account (not a personal Gmail). Forgot Password moves under the Password field.",
+        tickets: ["PN-2446"] },
+      { area: "Students", title: "Cambium-style test player - Select Text",
+        detail: "Select Text choices in a passage have no gray shading until a student hovers over or selects them, like the real test.",
+        tickets: ["PN-2334"] },
       { area: "Admins", title: "Manage Licenses cleanup",
         detail: "If it makes QA2 - District and school license views show the product name from the order, add a Grade/Level column, combine duplicate license rows into one total, and label integration licenses.",
         tickets: ["PN-2058"] },
@@ -29,36 +35,33 @@ window.RELEASES = [
         detail: "If it makes QA2 - PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
         tickets: ["PN-2072"] },
       { area: "Fixes", title: "Fixes",
-        detail: "AP U.S. History practice exams: Long Essay Questions with one prompt no longer show a Selected Prompt dropdown, so students can start typing right away, and the Practice Exam I LEQ shows its question again. Downloaded test PDFs stay portrait, with tables and answer boxes at normal size. Notebook entries stay put when a teacher switches Reading Selection tabs in Grade Assignment. Admin Add Students, Add Teachers and Add School Administrators forms no longer suggest saved usernames. Also planned, only if it makes QA2: Wiley Algebra & Trigonometry 5E answer order in the Assessment Builder.",
-        tickets: ["PN-2406", "PN-2426", "PN-1720", "PN-2346", "PN-2430", "PN-2429"] }
+        detail: "AP U.S. History practice exams: Long Essay Questions with one prompt no longer show a Selected Prompt dropdown, so students can start typing right away, and the Practice Exam I LEQ shows its question again. Students see the LEQ prompt in View Results. Downloaded test PDFs stay portrait, with tables and answer boxes at normal size. Notebook entries stay put when a teacher switches Reading Selection tabs in Grade Assignment. Admin Add Students, Add Teachers and Add School Administrators forms no longer suggest saved usernames. Also planned, only if they make QA2: a constructed response that's pasted, deleted and pasted again now saves; Wiley Algebra & Trigonometry 5E answer order in the Assessment Builder.",
+        tickets: ["PN-2406", "PN-2426", "PN-1720", "PN-2346", "PN-2430", "PN-2434", "PN-2429"] }
     ],
 
     articles: [
       { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - live 10/27", url: "https://support.perfectionlearning.com/en/articles/17720695-wiley-assessment-builder-frequently-asked-questions" },
-      { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null },
-      { title: "Using eBooks on Perfection Next", note: "Update if the toolbar buttons ship", url: null },
-      { title: "Accessibility Features with Immersive Reader", note: "Update how to open Immersive Reader if the toolbar buttons ship", url: null }
+      { title: "Creating an Assignment in Perfection Next", note: "Update for the matching options, tooltips and review-answer timing if Create Assignment ships", url: null },
+      { title: "Signing in with Google (Google Classroom)", note: "Update the login page steps if the login change ships", url: null },
+      { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null }
     ],
 
-    screenshots: [
-      { area: "Students", title: "Screen reader (JAWS) fixes in Connections eBooks",
-        caption: "From QA1. Immersive Reader and Text to Speech buttons in the eBook toolbar, next to Notebook and Bookmarks.",
-        articles: [],
-        shots: [
-          { file: "img/r26-3/ebook-toolbar-ir-tts.png", label: "eBook toolbar - Immersive Reader and Text to Speech" }
-        ] }
-    ],
+    screenshots: [],
 
     faq: [
-      { group: "eBooks and screen readers", items: [
-        { q: "\"Where did the Immersive Reader button go?\"",
-          a: "It's in the eBook toolbar at the top, next to Notebook and Bookmarks, with Text to Speech beside it." },
-        { q: "\"F9 in Edge doesn't open Immersive Reader.\"",
-          a: "F9 opens Edge's own reader, which can't read our eBook pages because they display as images. Use the Immersive Reader button in the eBook toolbar." },
-        { q: "\"JAWS can't read the page.\"",
-          a: "eBook pages display as images, so JAWS can't read them directly. Students can Tab to Immersive Reader (or press B in JAWS) and use Read Aloud there." }
+      { group: "Create Assignment (if it makes QA2)", items: [
+        { q: "\"I can't save the assignment with Weekdays checked.\"",
+          a: "With Weekdays selected, the start and due dates must be weekdays and the due time must be later than the start time. Students can open the assignment on weekdays between those two times." },
+        { q: "\"When will my students see their answers?\"",
+          a: "It's set under Allow students to review answers. The default waits until everyone's work is graded. Number of days after the due date counts from the due date - or from the end date when a Grace Period is on." },
+        { q: "\"Does random order mix up AP practice exam sections?\"",
+          a: "No. Questions shuffle only within a section. Multiple choice, SAQ and FRQ keep their order, and multi-part questions stay together." }
       ]},
-      { group: "Cypress-Fairbanks ISD sign-in", items: [
+      { group: "Cambium-style test player", items: [
+        { q: "\"I can't tell which text I can select.\"",
+          a: "Select Text choices aren't shaded until the student hovers over them or selects one, like the real test. Have them hover over the text." }
+      ]},
+      { group: "Cypress-Fairbanks ISD sign-in (if it makes QA2)", items: [
         { q: "\"Which sign-in do CyFair users use?\"",
           a: "Either RapidIdentity or Schoology - both reach the same account. Classes, rosters and grades come only from Schoology." }
       ]},
@@ -82,7 +85,9 @@ window.RELEASES = [
 
     knownIssues: [
       { title: "Stop impersonation logs you out (District and School Admins).",
-        detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." }
+        detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." },
+      { title: "AP U.S. History Assessment Library: broken logo for students.",
+        detail: "Above the assignment title, students see a broken image icon and the text \"AP United States History Assessment Library.\" Cosmetic only - a fix is requested (PN-2462)." }
     ]
   },
   {
@@ -212,7 +217,7 @@ window.RELEASES = [
 
     knownIssues: [
       { title: "The login page doesn't say Sign in with Google is only for Google Classroom schools.",
-        detail: "Users with a personal Gmail or at a school that isn't connected may try it and get an error page. Forgot password sits under the Google button but resets the Next password. A login-page fix is in progress." },
+        detail: "Users with a personal Gmail or at a school that isn't connected may try it and get an error page. Forgot password sits under the Google button but resets the Next password. A login-page fix is planned for R26.3 (PN-2446)." },
       { title: "Stop impersonation logs you out (District and School Admins).",
         detail: "Sign back in. A fix is coming in a later release." },
       { title: "Read assignments that were already stuck stay stuck.",
