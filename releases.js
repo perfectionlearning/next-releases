@@ -10,46 +10,46 @@ window.RELEASES = [
     label: "R26.3",
     status: "upcoming",
     dates: "Targeted for the weekend of 10/31 - 11/1 (to be confirmed)",
-    note: "Not on prod yet. Items can still move - anything marked (if it makes QA2) may go to a later release. Screen reader (JAWS) fixes for Connections eBooks and the updated Assessment Builder moved to R26.4. Screenshots are from QA1 and may change before release.",
-    summary: "Planned: Create Assignment shows the same options from any resource, with clearer tooltips; the login page explains who Sign in with Google is for; and several fixes. Also planned if they make QA2: a cleaner Manage Licenses view and RapidIdentity sign-in for Cypress-Fairbanks ISD.",
-    updated: "10/29/2026",
+    note: "Not on prod yet. Items can still move - anything marked (if it makes QA2) may go to a later release. Manage Licenses, the CyFair sign-in and Impersonate User missed the 10/29 QA2 cutoff and will likely move to R26.4 (to be confirmed). Screen reader (JAWS) fixes for Connections eBooks and the updated Assessment Builder moved to R26.4. Screenshots are from QA1 and may change before release.",
+    summary: "Planned: Create Assignment shows the same options from any resource, with clearer tooltips; the login page explains who Sign in with Google is for; and several fixes. Likely moving to R26.4 (to be confirmed): a cleaner Manage Licenses view and RapidIdentity sign-in for Cypress-Fairbanks ISD.",
+    updated: "10/30/2026",
     contact: "Katrina Keay",
 
     changes: [
       { area: "Assignments", title: "Create Assignment updates",
-        detail: "If it makes QA2 - Creating an assignment from an Interactive Edition or the Assessment Library shows the same options. Each option has a short tooltip, and a Learn more link opens the Creating an Assignment article. Allow students to review answers can be set to a number of days after the due date (after the end date when a Grace Period is on). With Weekdays selected, the start and due dates must be weekdays and the due time must be later than the start time. Grade 9 Benchmark sub-lessons now list in order.",
+        detail: "Creating an assignment from an Interactive Edition or the Assessment Library shows the same options. Each option has a short tooltip, and a Learn more link opens the Creating an Assignment article. Allow students to review answers can be set to a number of days after the due date (after the end date when a Grace Period is on). With Weekdays selected, the start and due dates must be weekdays and the due time must be later than the start time. Grade 9 Benchmark sub-lessons now list in order.",
         tickets: ["PN-2061"] },
       { area: "Sign-in", title: "Login page - Sign in with Google",
-        detail: "If it makes QA2 - A line under Sign in with Google says it's only for schools that connected Google Classroom to Perfection Next, using a school Google account (not a personal Gmail). Forgot Password moves under the Password field.",
+        detail: "A line under Sign in with Google says it's only for schools that connected Google Classroom to Perfection Next, using a school Google account (not a personal Gmail). Forgot Password moves under the Password field.",
         tickets: ["PN-2446"] },
       { area: "Students", title: "Cambium-style test player - Select Text",
         detail: "Select Text choices in a passage have no gray shading until a student hovers over or selects them, like the real test.",
         tickets: ["PN-2334"] },
       { area: "Admins", title: "Manage Licenses cleanup",
-        detail: "If it makes QA2 - District and school license views show the product name from the order, add a Grade/Level column, combine duplicate license rows into one total, and label integration licenses.",
+        detail: "Likely R26.4 (to be confirmed) - District and school license views show the product name from the order, add a Grade/Level column, combine duplicate license rows into one total, and label integration licenses.",
         tickets: ["PN-2058"] },
       { area: "Sign-in", title: "RapidIdentity sign-in for Cypress-Fairbanks ISD",
-        detail: "If it makes QA2 - One district: users can sign in through RapidIdentity, while classes, rosters and grades stay with Schoology.",
+        detail: "Likely R26.4 (to be confirmed) - One district: users can sign in through RapidIdentity, while classes, rosters and grades stay with Schoology.",
         tickets: ["PN-2380"] },
       { area: "Internal", title: "Impersonate User for Perfection Learning staff",
-        detail: "If it makes QA2 - PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
+        detail: "Likely R26.4 (to be confirmed) - PLC Admin (CE) can impersonate any user on www.perfectionnext.com, with a bar showing who they're viewing as. Not customer-facing.",
         tickets: ["PN-2072"] },
       { area: "Fixes", title: "Fixes",
-        detail: "AP U.S. History practice exams: Long Essay Questions with one prompt no longer show a Selected Prompt dropdown, so students can start typing right away, and the Practice Exam I LEQ shows its question again. Students see the LEQ prompt in View Results. Downloaded test PDFs stay portrait, with tables and answer boxes at normal size. Notebook entries stay put when a teacher switches Reading Selection tabs in Grade Assignment. Admin Add Students, Add Teachers and Add School Administrators forms no longer suggest saved usernames. Also planned, only if they make QA2: a constructed response that's pasted, deleted and pasted again now saves; Wiley Algebra & Trigonometry 5E answer order in the Assessment Builder.",
-        tickets: ["PN-2406", "PN-2426", "PN-1720", "PN-2346", "PN-2430", "PN-2434", "PN-2429"] }
+        detail: "Notebook entries stay put when a teacher switches Reading Selection tabs in Grade Assignment. Admin Add Students, Add Teachers and Add School Administrators forms no longer suggest saved usernames. Also planned, only if they make QA2: on AP U.S. History practice exams, Long Essay Questions with one prompt no longer show a Selected Prompt dropdown, the Practice Exam I LEQ shows its question again, and students see the LEQ prompt in View Results; downloaded test PDFs stay portrait, with tables and answer boxes at normal size; and a constructed response that's pasted, deleted and pasted again now saves.",
+        tickets: ["PN-2346", "PN-2430", "PN-2406", "PN-1720", "PN-2434"] }
     ],
 
     articles: [
       { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - live 10/27", url: "https://support.perfectionlearning.com/en/articles/17720695-wiley-assessment-builder-frequently-asked-questions" },
-      { title: "Creating an Assignment in Perfection Next", note: "Update for the matching options, tooltips and review-answer timing if Create Assignment ships", url: null },
-      { title: "Signing in with Google (Google Classroom)", note: "Update the login page steps if the login change ships", url: null },
-      { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change", url: null }
+      { title: "Creating an Assignment in Perfection Next", note: "Update for the matching options, tooltips and review-answer timing", url: null },
+      { title: "Signing in with Google (Google Classroom)", note: "Update the login page steps and screenshots", url: null },
+      { title: "Getting Started for District / School Administrators", note: "Update Licenses section if the license screens change (likely R26.4)", url: null }
     ],
 
     screenshots: [],
 
     faq: [
-      { group: "Create Assignment (if it makes QA2)", items: [
+      { group: "Create Assignment", items: [
         { q: "\"I can't save the assignment with Weekdays checked.\"",
           a: "With Weekdays selected, the start and due dates must be weekdays and the due time must be later than the start time. Students can open the assignment on weekdays between those two times." },
         { q: "\"When will my students see their answers?\"",
@@ -61,23 +61,23 @@ window.RELEASES = [
         { q: "\"I can't tell which text I can select.\"",
           a: "Select Text choices aren't shaded until the student hovers over them or selects one, like the real test. Have them hover over the text." }
       ]},
-      { group: "Cypress-Fairbanks ISD sign-in (if it makes QA2)", items: [
+      { group: "Cypress-Fairbanks ISD sign-in (likely R26.4)", items: [
         { q: "\"Which sign-in do CyFair users use?\"",
           a: "Either RapidIdentity or Schoology - both reach the same account. Classes, rosters and grades come only from Schoology." }
       ]},
-      { group: "Manage Licenses (if it makes QA2)", items: [
+      { group: "Manage Licenses (likely R26.4)", items: [
         { q: "\"My license list looks different.\"",
           a: "Rows for the same product are combined into one total, product names come from the order, and there's a new Grade/Level column. Integration licenses are labeled." },
         { q: "\"Why can my school see district licenses?\"",
           a: "Schools see licenses the district shares with them on the Manage Licenses screen." }
       ]},
-      { group: "Impersonate User - for our team (if it makes QA2)", items: [
+      { group: "Impersonate User - for our team (likely R26.4)", items: [
         { q: "\"I searched by name and can't find the user.\"",
           a: "Pick the district first - a name or email alone won't find the user yet." },
         { q: "\"Does impersonating sign the customer out?\"",
           a: "No - it doesn't affect the customer's own session. Stop impersonation takes you back to the user list." }
       ]},
-      { group: "AP U.S. History practice exams", items: [
+      { group: "AP U.S. History practice exams (if it makes QA2)", items: [
         { q: "\"The Selected Prompt dropdown is gone.\"",
           a: "Long Essay Questions with only one prompt no longer show the dropdown - the prompt shows and students can type right away." }
       ]}
@@ -85,7 +85,9 @@ window.RELEASES = [
 
     knownIssues: [
       { title: "Stop impersonation logs you out (District and School Admins).",
-        detail: "Carried from R26.2 unless PN-2072 fixes it. Sign back in." },
+        detail: "Carried from R26.2. Sign back in. The fix (PN-2072) is likely in R26.4." },
+      { title: "Assessment Builder: Wiley answer choices list the correct answer first.",
+        detail: "In Step 2 (Select Questions), Wiley items such as Algebra & Trigonometry 5E show the correct choice as A and the correct dropdown option first - that's the order Wiley sends. Students see their own shuffled order on new assignments. A fix is planned for R26.4 (PN-2429)." },
       { title: "AP U.S. History Assessment Library: broken logo for students.",
         detail: "Above the assignment title, students see a broken image icon and the text \"AP United States History Assessment Library.\" Cosmetic only - a fix is requested (PN-2462)." }
     ]
