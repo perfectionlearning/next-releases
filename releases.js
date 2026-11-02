@@ -10,7 +10,7 @@ window.RELEASES = [
     label: "R26.3",
     status: "released",
     dates: "Released 11/1/2026",
-    note: "Live on prod. Didn't make this release (still in testing, release not set): AP U.S. History single-prompt LEQ fix, downloaded test PDF fix, constructed-response paste fix, Manage Licenses cleanup and Impersonate User. Screen reader (JAWS) fixes and the updated Assessment Builder are planned for R26.4.",
+    note: "Live on prod. Support Center articles below are published. Didn't make this release (still in testing, release not set): AP U.S. History single-prompt LEQ fix, downloaded test PDF fix, constructed-response paste fix, Manage Licenses cleanup and Impersonate User. Screen reader (JAWS) fixes and the updated Assessment Builder are planned for R26.4.",
     summary: "Create Assignment shows the same options from any resource, with tooltips and a Learn more link. The login page says who Sign in with Google is for, and Forgot Password moved under the Password field. Also: Select Text shading on the Cambium-style test player and a Notebook fix. The CyFair sign-in code is out, but the switch hasn't happened yet.",
     updated: "11/2/2026",
     contact: "Katrina Keay",
@@ -34,9 +34,12 @@ window.RELEASES = [
     ],
 
     articles: [
-      { title: "Creating an Assignment in Perfection Next", note: "Updating - matching options, tooltips, Weekdays rules, review-answer timing", url: null },
-      { title: "Signing in with Google (Google Classroom)", note: "Updating - new login page and sign-in error section", url: null },
-      { title: "How do I retrieve my password?", note: "Updating - Forgot Password moved under the Password field", url: null },
+      { title: "Creating an Assignment in Perfection Next", note: "Updated - matching options, tooltips, Weekdays rules, review-answer timing, new screenshots", url: "https://support.perfectionlearning.com/en/articles/16978816-creating-an-assignment-in-perfection-next" },
+      { title: "Signing in with Google (Google Classroom)", note: "Updated - new login page and sign-in error section", url: "https://support.perfectionlearning.com/en/articles/17666490-signing-in-with-google-google-classroom" },
+      { title: "How do I retrieve my password?", note: "Updated - Forgot Password moved under the Password field", url: "https://support.perfectionlearning.com/en/articles/9614426-how-do-i-retrieve-my-password" },
+      { title: "Using Fluency Lab", note: "Updated - Record in gradebook as removed, review-answer options", url: "https://support.perfectionlearning.com/en/articles/16223368-using-fluency-lab" },
+      { title: "Assignment and Grade Passback with Canvas", note: "Updated - Create Assignment screenshot, Save button", url: "https://support.perfectionlearning.com/en/articles/11871207-assignment-and-grade-passback-with-canvas" },
+      { title: "Using Perfection Next with Schoology", note: "Updated - Save button", url: "https://support.perfectionlearning.com/en/articles/17666586-using-perfection-next-with-schoology" },
       { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - live 10/27", url: "https://support.perfectionlearning.com/en/articles/17720695-wiley-assessment-builder-frequently-asked-questions" }
     ],
 
