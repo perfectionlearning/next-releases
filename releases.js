@@ -52,7 +52,7 @@ window.RELEASES = [
         { q: "\"When will my students see their answers?\"",
           a: "It's set under Allow students to review answers. The default waits until everyone's work is graded. With a Grace Period on, Number of days counts from the End Date, not the due date." },
         { q: "\"Does random order mix up AP practice exam sections?\"",
-          a: "No. Questions shuffle only within a section. Multiple choice, SAQ and FRQ keep their order, and multi-part questions stay together." }
+          a: "No. Questions shuffle only within each sub-lesson, so the multiple choice, short answer and free response sections keep their order. Multi-part questions stay together." }
       ]},
       { group: "Sign-in", items: [
         { q: "\"Where did Forgot Password go?\"",
