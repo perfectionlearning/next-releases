@@ -8,11 +8,11 @@ window.RELEASES = [
   {
     id: "r26-4",
     label: "R26.4",
-    status: "upcoming",
-    dates: "Targeted for the weekend of 11/7-11/8",
-    note: "Not released yet. Jesse confirmed the list 11/5. Reports Retry instead of an endless spinner (PN-2347) goes out only if it passes testing Friday 11/6 - otherwise it moves to the next release. The eBook toolbar change gets a final QA2 check Friday. Assessment Builder usability fixes (PN-2392) are in this release but not listed below until we confirm what teachers will see. Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
-    summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering, Student Answers Time Spent and AP U.S. History one-prompt LEQs, plus one password rule across Next. AP English practice exam essays get Grading Assistant feedback instead of staying Pending, and the eBook Immersive Reader and Text to Speech buttons move to the toolbar for keyboard and screen reader users.",
-    updated: "11/5/2026",
+    status: "released",
+    dates: "Released 11/9/2026",
+    note: "Live on prod (released overnight 11/8-11/9). Didn't make this release: the eBook Immersive Reader and Text to Speech toolbar change (PN-2396, still in testing) and the Assessment Builder usability fixes (PN-2392). The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
+    summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering and Student Answers Time Spent, plus one password rule across Next. Reports and the Teacher Dashboard show an error with Retry instead of spinning forever, and AP English practice exam essays get Grading Assistant feedback instead of staying Pending (except AP Lang question 1 - see known issues).",
+    updated: "11/9/2026",
     contact: "Katrina Keay",
 
     changes: [
@@ -23,22 +23,21 @@ window.RELEASES = [
         detail: "Download to Print keeps tests in portrait. Tables, dropdown options, fractions, answer boxes and multiple-choice checkboxes print cleanly.",
         tickets: ["PN-1720", "PN-2115", "PN-2117", "PN-2119", "PN-2132"] },
       { area: "Grading Assistant", title: "AP English practice exams get feedback",
-        detail: "AP English Language and AP English Literature practice exam essays (Assessment Library) now get Grading Assistant feedback - likely score range, summary and rubric feedback - instead of staying Pending. Passed QA2 testing 11/4. Essays submitted before the release stay Pending.",
+        detail: "AP English Language and AP English Literature practice exam essays (Assessment Library) now get Grading Assistant feedback - likely score range, summary and rubric feedback - instead of staying Pending. Checked on prod 11/9: AP Lit and AP Lang questions 2 and 3 get feedback, but AP Lang question 1 (synthesis) still stays Pending (see known issues). Essays submitted before the release stay Pending.",
         tickets: ["PN-2267"] },
-      { area: "Accessibility", title: "eBook - Immersive Reader and Text to Speech in the toolbar",
-        detail: "The Immersive Reader and Text to Speech buttons move into the eBook toolbar, so keyboard and screen reader (JAWS) users can Tab to them. Everyone using the eBook sees the buttons in the new spot. After picking a page in Contents, focus moves to that page, and the cover page has a screen reader label. Reported by Florida School for the Deaf and Blind. Final QA2 check Friday 11/6.",
-        tickets: ["PN-2396"] },
+      { area: "Reports", title: "Reports show Retry instead of spinning",
+        detail: "If a report doesn't load, the Proficiency Report, Gradebook, Assignment report and Teacher Dashboard stop the spinner and show \"We couldn't load this report. Please try again.\" (\"We couldn't load your assignments\" on the Dashboard) with a Retry button. Screen readers announce the message. A class with no data still shows No Data. Reported at Okeechobee.",
+        tickets: ["PN-2347"] },
       { area: "Sign-in", title: "One password rule across Next",
         detail: "New and changed passwords need at least 6 characters with an uppercase letter, a lowercase letter and a number. Special characters are allowed, not required. Existing passwords keep working - nobody has to change theirs.",
         tickets: ["PN-2191"] },
       { area: "Fixes", title: "Fixes",
-        detail: "Part questions are numbered correctly in Display Answers, Grade Assignment, View Assignment, View Student Work and Print Assessment (they repeated the previous question's number). A School Admin signing in through Clever no longer gets stuck on a loading spinner when switching teachers or classes (reported by IDEA Public Schools). Student Answers shows Time Spent again. AP U.S. History practice exam LEQs with one prompt no longer show Selected Prompt, and the directions show above the prompt. Passage line numbers indent correctly, answer key passages have a space after the paragraph number, and the Gray Owl passage font is normal size. A content fix for item 1022856.",
-        tickets: ["PN-2470", "PN-2483", "PN-2408", "PN-2406", "PN-2378", "PN-2377", "PN-2375", "PN-1450"] }
+        detail: "Part questions are numbered correctly in Display Answers, Grade Assignment, View Assignment, View Student Work and Print Assessment (they repeated the previous question's number). A School Admin signing in through Clever no longer gets stuck on a loading spinner when switching teachers or classes (reported by IDEA Public Schools). Student Answers shows Time Spent again. Passage line numbers indent correctly in the Insight ELA passage that was reported, answer key passages have a space after the paragraph number, and the Gray Owl passage font is normal size. A content fix for item 1022856.",
+        tickets: ["PN-2470", "PN-2483", "PN-2408", "PN-2378", "PN-2377", "PN-2375", "PN-1450"] }
     ],
 
     articles: [
-      { title: "How do I retrieve my password?", note: "Updating after release - new password rule", url: null },
-      { title: "Setting a Student's Immersive Reader Accessibility Options", note: "Updating after release - Immersive Reader and Text to Speech buttons move to the eBook toolbar", url: null }
+      { title: "How do I retrieve my password?", note: "Being updated for the new password rule", url: null }
     ],
 
     screenshots: [],
@@ -54,21 +53,25 @@ window.RELEASES = [
         { q: "\"My student pasted an answer and it didn't save.\"",
           a: "Fixed in R26.4 - pasting, deleting and pasting again now saves. Answers lost before the release don't come back." }
       ]},
-      { group: "eBook", items: [
-        { q: "\"Where did the Immersive Reader button go?\"",
-          a: "It's in the eBook toolbar now, with Text to Speech." }
+      { group: "Reports", items: [
+        { q: "\"My report says 'We couldn't load this report.'\"",
+          a: "Click Retry. If it keeps happening, reload the page or try again in a few minutes, and contact support if it doesn't clear." }
       ]},
       { group: "AP English Grading Assistant", items: [
         { q: "\"My AP Lang or AP Lit practice exam essays still say Pending.\"",
-          a: "Essays submitted before R26.4 won't pick up feedback on their own. Essays submitted after the release get feedback in about 10 minutes." }
+          a: "Essays submitted before R26.4 won't pick up feedback on their own. Essays submitted after the release get feedback in about 10 minutes - except AP Lang question 1 (synthesis), which is still Pending while we look into it." }
       ]}
     ],
 
     knownIssues: [
       { title: "View Assessment: some questions show out of order.",
         detail: "Compared with the Answer Key, View Assessment lists some questions out of order (seen on Insight ELA Grade 3 Practice Test 1 with Constructed Response). Already on prod - a fix is logged (PN-2503)." },
-      { title: "AP English practice exams: teacher views show the directions twice and number the essays 1, 9, 12.",
-        detail: "In Grade Assignment, Display Answers, View Assignment and View Students Work. Students see the directions once and Question 1, 2, 3. Fixes logged (PN-2492, PN-2493)." },
+      { title: "AP English Grading Assistant: AP Lang practice exam question 1 stays Pending.",
+        detail: "Seen on prod 11/9 for essays submitted after the release: AP Lang question 1 (synthesis) stays Pending, while questions 2 and 3, AP Lit and AP History essays get feedback. Being looked into (PN-2267)." },
+      { title: "AP English practice exams: teacher views show the directions twice, and essay numbers have no space after them.",
+        detail: "In Grade Assignment, Display Answers, View Assignment and View Students Work. The essays are now numbered 1, 2, 3, but read \"1.Write an essay...\". Students see the directions once. Fixes logged (PN-2492, PN-2493)." },
+      { title: "AP Literature Practice Exam I: poem line numbers run into the text.",
+        detail: "In question 1 (the Santayana poem), lines 5 and 10 read \"5Within...\" and \"10Haunt...\" and aren't indented like the other lines. Students and teachers both see it. A fix is being requested." },
       { title: "AP English Grading Assistant: some summaries are missing a word.",
         detail: "For example \"needed to, resulting in...\". The score range and rubric feedback aren't affected. A fix is logged (PN-2486)." },
       { title: "Downloaded test PDFs: stacked fractions in a bulleted list can overlap.",
