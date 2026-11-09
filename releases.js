@@ -37,7 +37,7 @@ window.RELEASES = [
     ],
 
     articles: [
-      { title: "How do I retrieve my password?", note: "Being updated for the new password rule", url: null }
+      { title: "How do I retrieve my password?", note: "Shows the new password rule (6+ characters, 1 lowercase, 1 uppercase, 1 number)", url: "https://support.perfectionlearning.com/en/articles/9614426-how-do-i-retrieve-my-password" }
     ],
 
     screenshots: [],
