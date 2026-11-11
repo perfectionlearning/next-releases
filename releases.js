@@ -99,7 +99,11 @@ window.RELEASES = [
       { title: "Assessment Builder: Wiley answer choices list the correct answer first.",
         detail: "In Step 2 (Select Questions), Wiley items such as Algebra & Trigonometry 5E show the correct choice as A and the correct dropdown option first. Students see their own shuffled order on new assignments. The fix moved to R26.5 (PN-2429)." },
       { title: "AP U.S. History Assessment Library: broken logo for students.",
-        detail: "Carried from R26.3. Cosmetic only - a fix is requested (PN-2462)." }
+        detail: "Carried from R26.3. Cosmetic only - a fix is requested (PN-2462)." },
+      { title: "Interactive Edition: Text to Speech and Immersive Reader can play at the same time.",
+        detail: "Starting one doesn't pause the other, so both read aloud at once. Pause one before starting the other. Logged with Jesse to decide whether it's a fix or an improvement (PN-2534)." },
+      { title: "JAWS: opening Immersive Reader announces \"Exit button\" before \"Play button\".",
+        detail: "Focus is on Play, which is correct, but JAWS reads Exit first, which can confuse screen reader users. Found while testing the eBook Toolbar fix. Logged (PN-2535)." }
     ]
   },
   {
