@@ -52,7 +52,26 @@ window.RELEASES = [
       { title: "What's New in Perfection Next", note: "November 8, 2026 entry - the customer-facing summary of this release, including the eBook Toolbar buttons", url: "https://support.perfectionlearning.com/en/articles/18247074-what-s-new-in-perfection-next" }
     ],
 
-    screenshots: [],
+    screenshots: [
+      { area: "Post-release fix - 11/9", title: "eBook - Immersive Reader and Text to Speech in the toolbar",
+        caption: "Immersive Reader and Text-to-Speech are now also in the eBook Toolbar, to the right of Bookmarks. The icon on the page and the Play button at the bottom are still there.",
+        articles: [{ label: "Using eBooks", url: "https://support.perfectionlearning.com/en/articles/9742282-using-ebooks-on-perfection-next#h_a39efb19ab" }],
+        shots: [
+          { file: "img/r26-4/ebook-toolbar-immersive-reader-tts.png", label: "eBook Toolbar" }
+        ] },
+      { area: "Grading Assistant", title: "AP English practice exams get feedback",
+        caption: "Grading Assistant feedback on an AP Lang practice exam essay in Grade Assignment (prod, 11/11).",
+        articles: [],
+        shots: [
+          { file: "img/r26-4/grading-assistant-ap-lang-feedback.png", label: "Grade Assignment - Grading Assistant Feedback" }
+        ] },
+      { area: "Sign-in", title: "One password rule across Next",
+        caption: "The rule shows under Change Password (Account > Personal Information > Password).",
+        articles: [{ label: "Password article", url: "https://support.perfectionlearning.com/en/articles/9614426-how-do-i-retrieve-my-password" }],
+        shots: [
+          { file: "img/r26-4/password-rule-change-password.png", label: "Change Password" }
+        ] }
+    ],
 
     faq: [
       { group: "Checkbox questions (post-release fix 11/10)", items: [
@@ -144,7 +163,21 @@ window.RELEASES = [
       { title: "Wiley Assessment Builder: Frequently Asked Questions", note: "New - live 10/27", url: "https://support.perfectionlearning.com/en/articles/17720695-wiley-assessment-builder-frequently-asked-questions" }
     ],
 
-    screenshots: [],
+    screenshots: [
+      { area: "Assignments", title: "Create Assignment updates",
+        caption: "Create Assignment shows the same options wherever you start - weekdays only, randomized order, and when students can review answers, each with a tooltip.",
+        articles: [{ label: "Creating an assignment", url: "https://support.perfectionlearning.com/en/articles/16978816-creating-an-assignment-in-perfection-next" }],
+        shots: [
+          { file: "img/r26-3/create-assignment-options.png", label: "Create Assignment - options" },
+          { file: "img/r26-3/create-assignment-page.png", label: "Create Assignment - full page" }
+        ] },
+      { area: "Sign-in", title: "Login page - Sign in with Google",
+        caption: "Sign in with Google is labeled for Google Classroom schools only, and Forgot Password sits under the Password field.",
+        articles: [{ label: "Signing in with Google", url: "https://support.perfectionlearning.com/en/articles/17666490-signing-in-with-google-google-classroom" }],
+        shots: [
+          { file: "img/r26-3/login-sign-in-with-google.png", label: "Login page" }
+        ] }
+    ],
 
     faq: [
       { group: "Create Assignment", items: [
