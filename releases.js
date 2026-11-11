@@ -12,10 +12,13 @@ window.RELEASES = [
     dates: "Released 11/9/2026",
     note: "Live on prod (released overnight 11/8-11/9). Didn't make this release: the eBook Immersive Reader and Text to Speech toolbar change (PN-2396, still in testing) and the Assessment Builder usability fixes (PN-2392). The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
     summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering and Student Answers Time Spent, plus one password rule across Next. Reports and the Teacher Dashboard show an error with Retry instead of spinning forever, and AP English practice exam essays get Grading Assistant feedback instead of staying Pending (except AP Lang question 1 - see known issues).",
-    updated: "11/9/2026",
+    updated: "11/10/2026",
     contact: "Katrina Keay",
 
     changes: [
+      { area: "Post-release fix - 11/10", title: "Checkbox questions - students can check every choice",
+        detail: "Students can now check as many choices as they want on checkbox questions such as \"Select all that apply\" and \"Select TWO.\" Before, they could only check as many choices as the question had correct answers, so on \"Select all\" questions it looked like the question wasn't working (reported by Soaring Heights Charter School). Scoring is unchanged - checking more choices than the question asks for scores 0.",
+        tickets: ["PN-2474"] },
       { area: "Students", title: "Constructed responses save after paste",
         detail: "Pasting an answer, deleting it and pasting again now saves (reported by Coppell ISD). There's no paste lock and no teacher setting.",
         tickets: ["PN-2434", "PN-2363"] },
@@ -43,6 +46,10 @@ window.RELEASES = [
     screenshots: [],
 
     faq: [
+      { group: "Checkbox questions (post-release fix 11/10)", items: [
+        { q: "\"Why did my student get 0 on a Select TWO question?\"",
+          a: "They checked more choices than the question asks for. These questions only earn credit when the answer matches exactly. Since 11/10, students can check as many choices as they want, so this may come up more." }
+      ]},
       { group: "Passwords", items: [
         { q: "\"Do I have to change my password?\"",
           a: "No. Existing passwords keep working. The new rule only applies when a password is created or changed: at least 6 characters with an uppercase letter, a lowercase letter and a number." },
