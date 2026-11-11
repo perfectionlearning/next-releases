@@ -10,7 +10,7 @@ window.RELEASES = [
     label: "R26.4",
     status: "released",
     dates: "Released 11/9/2026",
-    note: "Live on prod (released overnight 11/8-11/9). Didn't make this release: the eBook Immersive Reader and Text to Speech toolbar change (PN-2396, still in testing) and the Assessment Builder usability fixes (PN-2392). The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
+    note: "Live on prod (released overnight 11/8-11/9). Didn't make this release: the Assessment Builder usability fixes (PN-2392). The eBook Immersive Reader and Text to Speech toolbar change (PN-2396) went out separately on 11/9 - see the post-release fixes. The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
     summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering and Student Answers Time Spent, plus one password rule across Next. Reports and the Teacher Dashboard show an error with Retry instead of spinning forever, and AP English practice exam essays get Grading Assistant feedback instead of staying Pending (AP Lang question 1 was fixed after the release - see the 11/11 post-release fix).",
     updated: "11/11/2026",
     contact: "Katrina Keay",
@@ -22,6 +22,9 @@ window.RELEASES = [
       { area: "Post-release fix - 11/10", title: "Checkbox questions - students can check every choice",
         detail: "Students can now check as many choices as they want on checkbox questions such as \"Select all that apply\" and \"Select TWO.\" Before, they could only check as many choices as the question had correct answers, so on \"Select all\" questions it looked like the question wasn't working (reported by Soaring Heights Charter School). Scoring is unchanged - checking more choices than the question asks for scores 0.",
         tickets: ["PN-2474"] },
+      { area: "Post-release fix - 11/9", title: "eBook - Immersive Reader and Text to Speech in the toolbar",
+        detail: "The Immersive Reader and Text to Speech buttons are now in the eBook toolbar, so keyboard and screen reader (JAWS) users can Tab to them. Everyone using the eBook sees the buttons in the new spot. After picking a page in Contents, focus moves to that page, and the cover page has a screen reader label. Reported by Florida School for the Deaf and Blind. Went out 11/9 after the release; checked on prod 11/10.",
+        tickets: ["PN-2396"] },
       { area: "Students", title: "Constructed responses save after paste",
         detail: "Pasting an answer, deleting it and pasting again now saves (reported by Coppell ISD). There's no paste lock and no teacher setting.",
         tickets: ["PN-2434", "PN-2363"] },
@@ -66,6 +69,10 @@ window.RELEASES = [
       { group: "Reports", items: [
         { q: "\"My report says 'We couldn't load this report.'\"",
           a: "Click Retry. If it keeps happening, reload the page or try again in a few minutes, and contact support if it doesn't clear." }
+      ]},
+      { group: "eBook (post-release fix 11/9)", items: [
+        { q: "\"Where did the Immersive Reader button go?\"",
+          a: "It's in the eBook toolbar now, with Text to Speech." }
       ]},
       { group: "AP English Grading Assistant", items: [
         { q: "\"My AP Lang or AP Lit practice exam essays still say Pending.\"",
