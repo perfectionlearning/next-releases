@@ -23,7 +23,7 @@ window.RELEASES = [
         detail: "Students can now check as many choices as they want on checkbox questions such as \"Select all that apply\" and \"Select TWO.\" Before, they could only check as many choices as the question had correct answers, so on \"Select all\" questions it looked like the question wasn't working (reported by Soaring Heights Charter School). Scoring is unchanged - checking more choices than the question asks for scores 0.",
         tickets: ["PN-2474"] },
       { area: "Post-release fix - 11/9", title: "eBook - Immersive Reader and Text to Speech in the toolbar",
-        detail: "The Immersive Reader and Text to Speech buttons are now in the eBook toolbar, so keyboard and screen reader (JAWS) users can Tab to them. Everyone using the eBook sees the buttons in the new spot. After picking a page in Contents, focus moves to that page, and the cover page has a screen reader label. Reported by Florida School for the Deaf and Blind. Went out 11/9 after the release; checked on prod 11/10.",
+        detail: "The Immersive Reader and Text to Speech buttons are now also in the eBook toolbar, so keyboard and screen reader (JAWS) users can Tab to them. The Immersive Reader icon on the page and the Text to Speech play button at the bottom are still there. After picking a section in Contents, focus moves to the Immersive Reader icon on that page, and the cover page has a screen reader label. Reported by Florida School for the Deaf and Blind. Went out 11/9 after the release; checked on prod 11/10.",
         tickets: ["PN-2396"] },
       { area: "Students", title: "Constructed responses save after paste",
         detail: "Pasting an answer, deleting it and pasting again now saves (reported by Coppell ISD). There's no paste lock and no teacher setting.",
@@ -71,8 +71,8 @@ window.RELEASES = [
           a: "Click Retry. If it keeps happening, reload the page or try again in a few minutes, and contact support if it doesn't clear." }
       ]},
       { group: "eBook (post-release fix 11/9)", items: [
-        { q: "\"Where did the Immersive Reader button go?\"",
-          a: "It's in the eBook toolbar now, with Text to Speech." }
+        { q: "\"Did the Immersive Reader button move?\"",
+          a: "No - it's still on the page. Immersive Reader and Text to Speech are now also in the eBook toolbar, where keyboard and screen reader users can Tab to them." }
       ]},
       { group: "AP English Grading Assistant", items: [
         { q: "\"My AP Lang or AP Lit practice exam essays still say Pending.\"",
