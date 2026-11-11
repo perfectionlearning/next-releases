@@ -10,7 +10,7 @@ window.RELEASES = [
     label: "R26.4",
     status: "released",
     dates: "Released 11/8/2026",
-    note: "Live on prod (released overnight 11/8-11/9). Didn't make this release: the Assessment Builder usability fixes (PN-2392). The eBook Immersive Reader and Text to Speech toolbar change (PN-2396) went out separately on 11/9 - see the post-release fixes. The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
+    note: "Live on prod (released overnight 11/8-11/9). Support Center articles below are published. Didn't make this release: the Assessment Builder usability fixes (PN-2392). The eBook Immersive Reader and Text to Speech toolbar change (PN-2396) went out separately on 11/9 - see the post-release fixes. The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
     summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering and Student Answers Time Spent, plus one password rule across Next. Reports and the Teacher Dashboard show an error with Retry instead of spinning forever, and AP English practice exam essays get Grading Assistant feedback instead of staying Pending (AP Lang question 1 was fixed after the release - see the 11/11 post-release fix).",
     updated: "11/11/2026",
     contact: "Katrina Keay",
@@ -46,7 +46,10 @@ window.RELEASES = [
     ],
 
     articles: [
-      { title: "How do I retrieve my password?", note: "Shows the new password rule (6+ characters, 1 lowercase, 1 uppercase, 1 number)", url: "https://support.perfectionlearning.com/en/articles/9614426-how-do-i-retrieve-my-password" }
+      { title: "How do I retrieve my password?", note: "Shows the new password rule (6+ characters, 1 lowercase, 1 uppercase, 1 number)", url: "https://support.perfectionlearning.com/en/articles/9614426-how-do-i-retrieve-my-password" },
+      { title: "Using eBooks on Perfection Next", note: "Updated 11/11 - Immersive Reader and Text-to-Speech buttons in the eBook Toolbar, plus keyboard notes (PN-2396)", url: "https://support.perfectionlearning.com/en/articles/9742282-using-ebooks-on-perfection-next" },
+      { title: "Accessibility Features with Immersive Reader", note: "Updated 11/11 - in an eBook, Immersive Reader is also in the eBook Toolbar (PN-2396)", url: "https://support.perfectionlearning.com/en/articles/10138683-accessibility-features-with-immersive-reader" },
+      { title: "What's New in Perfection Next", note: "November 8, 2026 entry - the customer-facing summary of this release, including the eBook Toolbar buttons", url: "https://support.perfectionlearning.com/en/articles/18247074-what-s-new-in-perfection-next" }
     ],
 
     screenshots: [],
