@@ -53,6 +53,12 @@ window.RELEASES = [
     ],
 
     screenshots: [
+      { area: "Post-release fix - 11/10", title: "Checkbox questions - students can check every choice",
+        caption: "Students can check as many choices as they want. Here three are checked on a Select TWO question (Measuring Up Foundations Math, Grade 3, View as Student). Checking more than the question asks for still scores 0.",
+        articles: [],
+        shots: [
+          { file: "img/r26-4/checkbox-select-two-three-checked.png", label: "Select TWO - three checked" }
+        ] },
       { area: "Post-release fix - 11/9", title: "eBook - Immersive Reader and Text to Speech in the toolbar",
         caption: "Immersive Reader and Text-to-Speech are now also in the eBook Toolbar, to the right of Bookmarks. The icon on the page and the Play button at the bottom are still there.",
         articles: [{ label: "Using eBooks", url: "https://support.perfectionlearning.com/en/articles/9742282-using-ebooks-on-perfection-next#h_a39efb19ab" }],
