@@ -11,11 +11,14 @@ window.RELEASES = [
     status: "released",
     dates: "Released 11/9/2026",
     note: "Live on prod (released overnight 11/8-11/9). Didn't make this release: the eBook Immersive Reader and Text to Speech toolbar change (PN-2396, still in testing) and the Assessment Builder usability fixes (PN-2392). The AP U.S. History one-prompt LEQ fix is live, but the updated practice exam items aren't on prod yet, so teachers won't see the change until they're moved (PN-2406). Moved to R26.5: DA/SA license screens cleanup, PLC Admin Impersonate User (with the DA/SA Stop impersonation fix), and the Assessment Builder question type filters and Wiley answer order.",
-    summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering and Student Answers Time Spent, plus one password rule across Next. Reports and the Teacher Dashboard show an error with Retry instead of spinning forever, and AP English practice exam essays get Grading Assistant feedback instead of staying Pending (except AP Lang question 1 - see known issues).",
-    updated: "11/10/2026",
+    summary: "Fixes for constructed responses that didn't save after pasting, downloaded test PDFs, part question numbering and Student Answers Time Spent, plus one password rule across Next. Reports and the Teacher Dashboard show an error with Retry instead of spinning forever, and AP English practice exam essays get Grading Assistant feedback instead of staying Pending (AP Lang question 1 was fixed after the release - see the 11/11 post-release fix).",
+    updated: "11/11/2026",
     contact: "Katrina Keay",
 
     changes: [
+      { area: "Post-release fix - 11/11", title: "AP Lang question 1 gets feedback",
+        detail: "AP Lang Practice Exams I, II and III question 1 (synthesis) now get Grading Assistant feedback like questions 2 and 3 (Practice Exam I on 11/10, II and III on 11/11). Checked on prod 11/11: new essays got feedback within 10 minutes. Tiger Rock re-ran essays that were stuck Pending.",
+        tickets: ["PN-2267"] },
       { area: "Post-release fix - 11/10", title: "Checkbox questions - students can check every choice",
         detail: "Students can now check as many choices as they want on checkbox questions such as \"Select all that apply\" and \"Select TWO.\" Before, they could only check as many choices as the question had correct answers, so on \"Select all\" questions it looked like the question wasn't working (reported by Soaring Heights Charter School). Scoring is unchanged - checking more choices than the question asks for scores 0.",
         tickets: ["PN-2474"] },
@@ -26,7 +29,7 @@ window.RELEASES = [
         detail: "Download to Print keeps tests in portrait. Tables, dropdown options, fractions, answer boxes and multiple-choice checkboxes print cleanly.",
         tickets: ["PN-1720", "PN-2115", "PN-2117", "PN-2119", "PN-2132"] },
       { area: "Grading Assistant", title: "AP English practice exams get feedback",
-        detail: "AP English Language and AP English Literature practice exam essays (Assessment Library) now get Grading Assistant feedback - likely score range, summary and rubric feedback - instead of staying Pending. Checked on prod 11/9: AP Lit and AP Lang questions 2 and 3 get feedback, but AP Lang question 1 (synthesis) still stays Pending (see known issues). Essays submitted before the release stay Pending.",
+        detail: "AP English Language and AP English Literature practice exam essays (Assessment Library) now get Grading Assistant feedback - likely score range, summary and rubric feedback - instead of staying Pending. Checked on prod: AP Lit and AP Lang questions 2 and 3 got feedback on 11/9, and AP Lang question 1 (synthesis) since the 11/11 post-release fix. Essays submitted before the release stay Pending.",
         tickets: ["PN-2267"] },
       { area: "Reports", title: "Reports show Retry instead of spinning",
         detail: "If a report doesn't load, the Proficiency Report, Gradebook, Assignment report and Teacher Dashboard stop the spinner and show \"We couldn't load this report. Please try again.\" (\"We couldn't load your assignments\" on the Dashboard) with a Retry button. Screen readers announce the message. A class with no data still shows No Data. Reported at Okeechobee.",
@@ -66,17 +69,15 @@ window.RELEASES = [
       ]},
       { group: "AP English Grading Assistant", items: [
         { q: "\"My AP Lang or AP Lit practice exam essays still say Pending.\"",
-          a: "Essays submitted before R26.4 won't pick up feedback on their own. Essays submitted after the release get feedback in about 10 minutes - except AP Lang question 1 (synthesis), which is still Pending while we look into it." }
+          a: "Essays submitted before R26.4 won't pick up feedback on their own. Essays submitted after the release get feedback in about 10 minutes, including AP Lang question 1 since the 11/11 post-release fix (essays that were stuck Pending were re-run)." }
       ]}
     ],
 
     knownIssues: [
       { title: "View Assessment: some questions show out of order.",
         detail: "Compared with the Answer Key, View Assessment lists some questions out of order (seen on Insight ELA Grade 3 Practice Test 1 with Constructed Response). Already on prod - a fix is logged (PN-2503)." },
-      { title: "AP English Grading Assistant: AP Lang practice exam question 1 stays Pending.",
-        detail: "Seen on prod 11/9 for essays submitted after the release: AP Lang question 1 (synthesis) stays Pending, while questions 2 and 3, AP Lit and AP History essays get feedback. Being looked into (PN-2267)." },
-      { title: "AP English practice exams: teacher views show the directions twice, and essay numbers have no space after them.",
-        detail: "In Grade Assignment, Display Answers, View Assignment and View Students Work. The essays are now numbered 1, 2, 3, but read \"1.Write an essay...\". Students see the directions once. Fixes logged (PN-2492, PN-2493)." },
+      { title: "AP English practice exams: teacher views show AP History directions above the exam's own, and essay numbers have no space after them.",
+        detail: "In Grade Assignment, Display Answers, View Assignment and View Students Work, AP Lang and AP Lit Section II open with the AP History directions (DBQ and LEQ) - seen on prod 11/11. The essays are now numbered 1, 2, 3, but read \"1.Write an essay...\". Students see only the exam's directions. Fixes logged (PN-2492, PN-2493)." },
       { title: "AP Literature Practice Exam I: poem line numbers run into the text.",
         detail: "In question 1 (the Santayana poem), lines 5 and 10 read \"5Within...\" and \"10Haunt...\" and aren't indented like the other lines. Students and teachers both see it. A fix is being requested." },
       { title: "AP English Grading Assistant: some summaries are missing a word.",
